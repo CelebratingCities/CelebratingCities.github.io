@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Uber/Deloitte/DOT Hackathon</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/added_style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Mapbox docs -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.12.4/mapbox-gl.css' rel='stylesheet' />
+    <!--<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.js'></script>-->
+    <!--<link href='https://api.tiles.mapbox.com/mapbox.js/v2.2.4/mapbox.css' rel='stylesheet' />-->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Font Lato -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<nav class="navbar transparent navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DOT's Uber Hackathon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div id="banner-head" class="text-center">
+    <div class="col-xs-12">
+        <h1 class="text-center vertical-align">Driving Opportunity</h1>
+        <hr>
+        <h4>Help us revitalize communities, create pathways to work, and connect hardworking Americans to a better quality of life</h4>
+        <h4>February 19<sup>th</sup>-21<sup>st</sup>, 2016</h4>
+        <br>
+    </div>
+
+</div>
+
+<!--<div class="splash">-->
+    <!--<div id="banner">-->
+        <!--<div class="col-xs-12" style="padding:20vh">-->
+            <!--<h1 class="text-center vertical-align">Driving Opportunity</h1>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<img class="img img-responsive" src="img/banner1.jpg">&ndash;&gt;-->
+    <!--</div>-->
+<!--</div>-->
+
+<div id="mapbanner">
+    <div id="map-one" class="map"></div>
+</div>
+
+<div class="wrapper" style="background-color:white">
+    <div class="container text-center" style="height:400px;z-index:1;padding-top:40px">
+        <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-television fa-5x"></i>
+            <h3>Kickoff Presentation</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-table fa-5x"></i>
+            <h3>Data</h3>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-book fa-5x"></i>
+            <h3>Documentation</h3>
+            <hr>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/mapscript.js"></script>
+</body>
+</html>
