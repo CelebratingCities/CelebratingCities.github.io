@@ -119,6 +119,7 @@ body{
 .dataset {
     background-color:lightgrey;
     height:200px;
+    margin-bottom:30px;
 }
 
 .dataset:hover .btn-Tools,
@@ -126,6 +127,10 @@ body{
     opacity: 100;
     visibility: visible;
     transform: translateY(-30px);
+}
+
+.spacer{
+    height:150px;
 }
 
 /*search box*/

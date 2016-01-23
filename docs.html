@@ -61,6 +61,18 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<div id="banner-head" class="text-center">
+    <div class="col-xs-12">
+        <h1 class="text-center vertical-align">Documentation</h1>
+        <hr>
+        <!--<h4>Help us revitalize communities, create pathways to work, and connect hardworking Americans to a better quality of life</h4>-->
+        <!--<h4>February 19<sup>th</sup>-21<sup>st</sup>, 2016</h4>-->
+    </div>
+</div>
+
+<div class="spacer"></div>
+
+
 <div class="wrapper">
     <div class="container text-center" style="z-index:1;padding-top:40px">
         <div class="col-xs-12 col-sm-4">
@@ -149,6 +161,17 @@
     </div>
 </div>
 
+<script>
+    $(window).bind('scroll', function (e) {
+        parallaxScroll();
+    });
+
+    function parallaxScroll() {
+        var scrolled = $(window).scrollTop();
+        $('#banner-head').css('top', (0 - (scrolled * .28)) + 'px');
+    }
+
+</script>
 
 <script src="js/mapscript.js"></script>
 </body>
