@@ -51,28 +51,11 @@
                     </form>
                 </div>
             </div>
-            <!--<form class="navbar-form navbar-right" role="search">-->
-                <!--<div class="form-group">-->
-                    <!--<input type="text" class="form-control" placeholder="Search">-->
-                <!--</div>-->
-                <!--<button type="submit" class="btn btn-default">Submit</button>-->
-            <!--</form>-->
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Intro<span class="sr-only">(current)</span></a></li>
+                <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                <li><a href="intro.html">Intro</a></li>
                 <li><a href="#">Data</a></li>
-                <li><a href="#">Docs</a></li>
-                <!--<li class="dropdown">-->
-                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>-->
-                    <!--<ul class="dropdown-menu">-->
-                        <!--<li><a href="#">Action</a></li>-->
-                        <!--<li><a href="#">Another action</a></li>-->
-                        <!--<li><a href="#">Something else here</a></li>-->
-                        <!--<li role="separator" class="divider"></li>-->
-                        <!--<li><a href="#">Separated link</a></li>-->
-                        <!--<li role="separator" class="divider"></li>-->
-                        <!--<li><a href="#">One more separated link</a></li>-->
-                    <!--</ul>-->
-                <!--</li>-->
+                <li><a href="docs.html">Docs</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -93,35 +76,44 @@
     <div id="map-one" class="map"></div>
 </div>
 
-<div class="wrapper" style="background-color:white">
-    <div class="container text-center" style="z-index:1;padding-top:40px">
+<div class="wrapper">
+    <div id="mainlinks" class="container text-center" style="z-index:1;padding-top:40px">
         <div class="col-xs-12 col-sm-4">
-            <i class="fa fa-television fa-5x"></i>
-            <h3>Presentations</h3>
-            <p>
-                Check out the kickoff presentation for an overview of what data DOT is bringing to the hackathon, how
-                to access the data, where to go to ask questions and general tips and tricks.
-            </p>
-            <hr>
+            <a href="intro.html">
+                <i class="fa fa-television fa-5x"></i>
+                <h3>Presentations</h3>
+                <p>
+                    Check out the kickoff presentation for an overview of what data DOT is bringing to the hackathon, how
+                    to access the data, where to go to ask questions and general tips and tricks.
+                </p>
+            </a>
+            <br>
+            <br>
         </div>
         <div class="col-xs-12 col-sm-4">
-            <i class="fa fa-table fa-5x"></i>
-            <h3>Data</h3>
-            <p>
-                Go to the Open Data portal we stood up for datasets we've published specifically for the Hackathon.
-                We have links to data all over the place but this is where the data is hosted and the APIs are
-                being served.
-            </p>
-            <hr>
+            <a href="#">
+                <i class="fa fa-table fa-5x"></i>
+                <h3>Data</h3>
+                <p>
+                    Go to the Open Data portal we stood up for datasets we've published specifically for the Hackathon.
+                    We have links to data all over the place but this is where the data is hosted and the APIs are
+                    being served.
+                </p>
+            </a>
+            <br>
+            <br>
         </div>
         <div class="col-xs-12 col-sm-4">
-            <i class="fa fa-book fa-5x"></i>
-            <h3>Documentation</h3>
-            <p>
-                This is where we're providing some documentation on how the APIs work as well as provide a few usage
-                examples. Hopefully this'll help you get up and running quickly.
-            </p>
-            <hr>
+            <a href="docs.html">
+                <i class="fa fa-book fa-5x"></i>
+                <h3>Documentation</h3>
+                <p>
+                    This is where we're providing some documentation on how the APIs work as well as provide a few usage
+                    examples. Hopefully this'll help you get up and running quickly.
+                </p>
+            </a>
+            <br>
+            <br>
         </div>
     </div>
 </div>
@@ -132,24 +124,142 @@
             <div class="col-xs-12">
                 <h2 class="text-center" style="vertical-align:middle">
                     <i>
-                        “Through transportation, we can help ensure that the rungs on the ladder of opportunity aren’t so
+                        Through transportation, we can help ensure that the rungs on the ladder of opportunity aren’t so
                         far apart—and that the American dream is still within reach for those who are willing to work
-                        for it.”
+                        for it.
                     </i>
+                    <br>
+                    <br>
                     <p class="text-right">– Secretary Anthony Foxx</p>
                 </h2>
             </div>
-
         </div>
     </div>
 </div>
 
 <div class="wrapper" style="background-color:white">
-    <div class="container text-center" style="z-index:1;padding-top:40px">
-        <h1>Data</h1>
+    <div class="container text-center" style=";padding-top:40px;padding-bottom:60px">
+        <h1>Data Providers</h1>
         <hr>
-        <div class="col-xs-12 col-sm-4">
+        <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 dataset">
+                <h3>Uber</h3>
+                <div class="btn-Tools" style="padding:90px 0">
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                </div>
+            </div>
         </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 dataset">
+                <h3>DOT</h3>
+                <div class="btn-Tools" style="padding:90px 0">
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 dataset">
+                <h3>Census</h3>
+                <div class="btn-Tools" style="padding:90px 0">
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-3">
+            <div class="col-xs-12 dataset">
+                <h3>HUD</h3>
+                <div class="btn-Tools" style="padding:90px 0">
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
+                    <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="splash">
+    <div id="banner2">
+        <div class="container">
+            <div class="col-xs-12">
+                <h2 class="text-center" style="vertical-align:middle">
+                    <i>
+                        Transportation projects create pathways to jobs. Through thoughtful workforce programs — built
+                        in partnership with industry, and with a focus on disadvantaged businesses — we can help more
+                        underserved people find and keep good jobs in the transportation sector.
+                    </i>
+                </h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper" style="background-color:white">
+    <div class="container text-center" style=";padding-top:40px">
+        <h1>A big thank you goes out to our friends</h1>
+        <div class="col-xs-12 col-sm-6" style="padding:100px 50px">
+            <img class="img img-responsive center-block" src="img/uber_logo.jpg">
+        </div>
+        <div class="col-xs-12 col-sm-6" style="padding:100px 50px">
+            <img class="img-responsive center-block" src="img/deloitte_logo.jpg">
+        </div>
+    </div>
+</div>
+
+<div id="footerwrap">
+    <div class="container text-center">
+        <!--<div class="row">-->
+            <div class="col-lg-4">
+                <h4>About DOT</h4>
+
+                <div class="hline-w"></div>
+                <p>
+                    The U.S. Department of Transportation's (DOT's) mission is to serve the United States by ensuring a
+                    fast, safe, efficient, accessible and convenient transportation system that meets our vital
+                    national interests and enhances the quality of life of the American people, today and into the
+                    future.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+
+                <div class="hline-w"></div>
+                <p id="slinks">
+                    <a href=""
+                       onclick="window.open('https://twitter.com/share', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-twitter"></i></a>
+                    <a href="//www.reddit.com/submit"
+                       onclick="window.open('//www.reddit.com/submit?url=' + encodeURIComponent(window.location), 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-reddit"></i></a>
+                    <a href="https://news.ycombinator.com/submit"
+                       onclick="window.open('http://news.ycombinator.com/submitlink?u='+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
+                        <i class="fa fa-hacker-news"></i>
+                    </a>
+                    <a href=""
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=%22'+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href=""
+                       onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://http://dot-hackathon.github.io/&title=DOT%20Uber%20Hackathonarticle&summary=Best%20hackathon%20in%20the%20galaxy&source=HUD', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-linkedin"></i></a>
+
+                    <a href=""
+                       onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-google-plus"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>DOT HQ</h4>
+
+                <div class="hline-w"></div>
+                <p>
+                    1200 New Jersey Ave, S.E.<br/>
+                    Washington, DC 20410<br/>
+                    Telephone: (202) 855-4200<br/>
+                </p>
+            </div>
     </div>
 </div>
 

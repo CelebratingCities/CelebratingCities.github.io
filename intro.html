@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <title>Uber/Deloitte/DOT Hackathon</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/added_style.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Mapbox docs -->
+    <script src='js/mapbox-gl.js'></script>
+    <link href='css/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DOT's Uber Hackathon</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-form navbar-right expanding-sf">
+                <div class="form"> <span class="toggle"></span>
+                    <form role="search" method="get" id="searchform" action="">
+                        <input type="text" placeholder="Search" id="s" name="s" value="">
+                        <input type="submit" value="" id="searchsubmit">
+                    </form>
+                </div>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="#">Intro<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Data</a></li>
+                <li><a href="docs.html">Docs</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="wrapper">
+    <div class="container text-center" style="z-index:1;padding-top:40px">
+        <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-television fa-5x"></i>
+            <h3>Presentations</h3>
+            <p>
+                Check out the kickoff presentation for an overview of what data DOT is bringing to the hackathon, how
+                to access the data, where to go to ask questions and general tips and tricks.
+            </p>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-table fa-5x"></i>
+            <h3>Data</h3>
+            <p>
+                Go to the Open Data portal we stood up for datasets we've published specifically for the Hackathon.
+                We have links to data all over the place but this is where the data is hosted and the APIs are
+                being served.
+            </p>
+            <hr>
+        </div>
+        <div class="col-xs-12 col-sm-4">
+            <i class="fa fa-book fa-5x"></i>
+            <h3>Documentation</h3>
+            <p>
+                This is where we're providing some documentation on how the APIs work as well as provide a few usage
+                examples. Hopefully this'll help you get up and running quickly.
+            </p>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div id="footerwrap">
+    <div class="container text-center">
+        <!--<div class="row">-->
+            <div class="col-lg-4">
+                <h4>About DOT</h4>
+
+                <div class="hline-w"></div>
+                <p>
+                    The U.S. Department of Transportation's (DOT's) mission is to serve the United States by ensuring a
+                    fast, safe, efficient, accessible and convenient transportation system that meets our vital
+                    national interests and enhances the quality of life of the American people, today and into the
+                    future.
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>Social Links</h4>
+
+                <div class="hline-w"></div>
+                <p id="slinks">
+                    <a href=""
+                       onclick="window.open('https://twitter.com/share', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-twitter"></i></a>
+                    <a href="//www.reddit.com/submit"
+                       onclick="window.open('//www.reddit.com/submit?url=' + encodeURIComponent(window.location), 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-reddit"></i></a>
+                    <a href="https://news.ycombinator.com/submit"
+                       onclick="window.open('http://news.ycombinator.com/submitlink?u='+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
+                        <i class="fa fa-hacker-news"></i>
+                    </a>
+                    <a href=""
+                       onclick="window.open('http://www.facebook.com/sharer.php?u=%22'+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href=""
+                       onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://http://dot-hackathon.github.io/&title=DOT%20Uber%20Hackathonarticle&summary=Best%20hackathon%20in%20the%20galaxy&source=HUD', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-linkedin"></i></a>
+
+                    <a href=""
+                       onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>', 'newwindow', 'width=550, height=450'); return false;"><i
+                            class="fa fa-google-plus"></i></a>
+                </p>
+            </div>
+            <div class="col-lg-4">
+                <h4>DOT HQ</h4>
+
+                <div class="hline-w"></div>
+                <p>
+                    1200 New Jersey Ave, S.E.<br/>
+                    Washington, DC 20410<br/>
+                    Telephone: (202) 855-4200<br/>
+                </p>
+            </div>
+    </div>
+</div>
+
+
+<script src="js/mapscript.js"></script>
+</body>
+</html>

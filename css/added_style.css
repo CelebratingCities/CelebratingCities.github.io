@@ -3,6 +3,10 @@ body{
     font-weight: 300;
 }
 
+.wrapper {
+    background-color:white;
+}
+
 .navbar-inverse {
     /*background: rgba(0,0,0,0.4);*/
     background: rgba(2,43,58,1);
@@ -11,6 +15,16 @@ body{
 .navbar-brand {
     color:white;
     font-weight:500;
+}
+
+.navbar-inverse .navbar-brand{
+    color:white;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover{
+    background: #0dab76;
 }
 
 .splash {
@@ -57,10 +71,61 @@ body{
 #banner>.container>div>h2>i,
 #banner>.container>div>h2>p{
     opacity:0.8;
-    color: #0dab76;
-    /*font-size:6em;*/
+    color: white;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+}
+
+#banner2{
+    height:40vh;
+    min-height:300px;
+    width:100%;
+    background:url("../img/balt.jpg") no-repeat center;
+    background-size: cover;
+    background-color: #222;
+}
+#banner2>.container>div {
+    padding-top:100px;
+}
+#banner2>.container>div>h2>i,
+#banner2>.container>div>h2>p{
+    opacity:0.8;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+#mainlinks a{
+    text-decoration: none;
+    color: #333333;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+#mainlinks a:hover,
+#mainlinks a:active{
+    color:#0DAB76;
+
+}
+
+.btn-Tools{
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.dataset {
+    background-color:lightgrey;
+    height:200px;
+}
+
+.dataset:hover .btn-Tools,
+.dataset:active .btn-Tools{
+    opacity: 100;
+    visibility: visible;
+    transform: translateY(-30px);
 }
 
 /*search box*/
@@ -93,9 +158,9 @@ body{
     margin: 0;
     opacity: 0;
     padding: 0;
-    transition: all 0.2s ease-in-out 0s;
     visibility: hidden;
     width: 10px;
+    transition: all 0.2s ease-in-out 0s;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
@@ -109,20 +174,35 @@ body{
     visibility: visible;
     width: 250px;
 }
+
+::-webkit-input-placeholder {
+    color: white;
+}
+:-moz-placeholder {
+    color: white;
+}
+::-moz-placeholder {
+    color: white;
+}
+:-ms-input-placeholder {
+    color: white;
+}
+
+
 #searchform #s {
-    background: none repeat scroll 0 0 #E14D43;
+    background: none repeat scroll 0 0 #0DAB76;
     border: medium none;
     color: #FFFFFF;
     float: right;
     outline: none;
-    font-family: helvetica, verdana, arial, sans-serif;
-    font-size: 12px;
+    /*font-family: helvetica, verdana, arial, sans-serif;*/
+    /*font-size: 12px;*/
     height: 100%;
     padding: 0 15px;
     width: 100%;
 }
 #searchform #searchsubmit {
-    background: url("http://i.imgur.com/ePNPopY.png") no-repeat scroll center center #c6473f;
+    background: url("http://i.imgur.com/ePNPopY.png") no-repeat scroll center center #0DAB76;
     border: medium none;
     color: #FFFFFF;
     cursor: pointer;
@@ -133,11 +213,46 @@ body{
     width: 50px;
 }
 
+/* Footer */
+#footerwrap {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #022B3A;
+}
+
+#footerwrap p {
+    color: #bfc9d3;
+}
+
+#footerwrap h4 {
+    color: white;
+}
+
+#footerwrap i {
+    font-size: 30px;
+    color: #bfc9d3;
+    padding:20px 10px;
+}
+
+#footerwrap i:hover {
+    color: #0DAB76;
+    padding:20px 10px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.hline-w {
+    border-bottom: 2px solid #ffffff;
+    margin-bottom: 25px;
+}
+
+
 @media screen and (max-width : 768px) {
     .expanding-sf {
         height: 60px;
         width:100%;
-        background: none repeat scroll 0 0 #E14D43;
+        background: none repeat scroll 0 0 #0DAB76;
     }
 
     .form,
@@ -145,6 +260,7 @@ body{
     #searchform #s,
     .expanding-sf,
     .form:hover #searchform {
+        margin-left:0;
         display: block;
         opacity: 1;
         -webkit-transition: all 0.2s ease-in-out;
@@ -152,19 +268,19 @@ body{
         -o-transition: all 0.2s ease-in-out;
         visibility: visible;
         width: 100%;
-
     }
-
 }
 
 @media screen and (max-width: 580px) {
-    #banner>.container>div {
+    #banner>.container>div,
+    #banner2>.container>div {
         padding-top:60px;
     }
     #banner>.container>div>h2>i,
-    #banner>.container>div>h2>p{
+    #banner>.container>div>h2>p,
+    #banner2>.container>div>h2>i,
+    #banner2>.container>div>h2>p{
         opacity:0.8;
-        color: #0dab76;
         font-size:.6em;
     }
 }
