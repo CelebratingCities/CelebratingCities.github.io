@@ -12,11 +12,13 @@ var map = new mapboxgl.Map({
     interactive: false
 });
 
-//function onLoad() {
-//
-//    window.onscroll = function() {
-//        var speed = 8.0;
-//        document.body.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
-//    }
-//
-//}
+$(window).bind('scroll', function (e) {
+    parallaxScroll();
+});
+
+function parallaxScroll() {
+    var scrolled = $(window).scrollTop();
+    $('#map-one').css('top', (0 - (scrolled * .25)) + 'px');
+    $('#banner-head').css('top', (0 - (scrolled * .28)) + 'px');
+}
+
