@@ -44,7 +44,6 @@
             <a class="navbar-brand" href="#">DOT's Uber Hackathon</a>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <div class="navbar-form navbar-right expanding-sf">
                 <div class="form"> <span class="toggle"></span>
@@ -66,11 +65,16 @@
 
 <div id="banner-head" class="text-center">
     <div class="col-xs-12">
-        <h1 class="text-center vertical-align">Driving Opportunity</h1>
+        <h1 class="text-center vertical-align">Opportunity Hacks</h1>
         <hr>
         <h4>
-            Help us revitalize communities, create pathways to work, and connect hardworking Americans to a better
-            quality of life.
+            Join Uber and DOT and help drive opportunity for the
+            <button class="btn" onclick="pan(1)">Baltimore</button>
+            -
+            <button class="btn" onclick="pan(0)">Washington</button> metropolitan area.
+        </h4>
+        <h4>
+            <!--Together let's find work to the gaps and hack the last mile at Uber's East Coast Headquarters!-->
         </h4>
         <h4>February 19<sup>th</sup>-21<sup>st</sup>, 2016</h4>
         <br>
@@ -152,8 +156,8 @@
                 <div class="mask">
                     <h3>Uber</h3>
                     <div class="btn-Tools">
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>
                     </div>
                 </div>
             </div>
@@ -163,8 +167,8 @@
                 <div class="mask">
                     <h3>DOT</h3>
                     <div class="btn-Tools">
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>
                     </div>
                 </div>
             </div>
@@ -174,8 +178,8 @@
                 <div class="mask">
                     <h3>Census</h3>
                     <div class="btn-Tools">
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>
                     </div>
                 </div>
             </div>
@@ -185,8 +189,8 @@
                 <div class="mask">
                     <h3>HUD</h3>
                     <div class="btn-Tools">
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-search"></i></button>
-                        <button class="btn" onclick="window.open('#');"><i class="fa fa-gears"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <button class="btn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>
                     </div>
                 </div>
             </div>
@@ -279,5 +283,10 @@
 
 
 <script src="js/mapscript.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </body>
 </html>

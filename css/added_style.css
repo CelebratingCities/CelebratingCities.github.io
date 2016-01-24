@@ -302,6 +302,11 @@ body{
     margin-bottom: 25px;
 }
 
+.btn:focus,.btn:active {
+    outline-color: #0DAB76 !important;
+}
+
+/*Docs Style*/
 
 @media screen and (max-width : 768px) {
     .expanding-sf {
