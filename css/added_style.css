@@ -329,7 +329,7 @@ body{
 @media screen and (max-width: 580px) {
     #banner>.container>div,
     #banner2>.container>div {
-        padding-top:60px;
+        padding-top:0px;
     }
     #banner>.container>div>h2>i,
     #banner>.container>div>h2>p,
