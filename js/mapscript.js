@@ -8,7 +8,7 @@ function getRandomInt(min, max) {
 }
 
 
-var centers = [[-77.038,38.905],[-76.61,39.30]],
+var centers = [[-77.038,38.915],[-76.61,39.31]],
     centerChoice = centers[getRandomInt(0,1)];
 
 
