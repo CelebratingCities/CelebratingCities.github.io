@@ -110,6 +110,7 @@ body{
 
 .btn-Tools{
     opacity: 0;
+    padding:40px 0;
     transition: all 0.3s ease-in-out 0s;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -117,9 +118,58 @@ body{
 }
 
 .dataset {
-    background-color:lightgrey;
+    background-size: 100% auto;
+    background-color:white;
+    background-position:center;
+    border: 5px solid #0DAB76;
     height:200px;
+    padding:0;
     margin-bottom:30px;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.dataset>.mask>h3{
+    margin-top:0px;
+    padding-top:30px;
+    font-size:4em;
+    font-family:'Lato', sans-serif;
+    color:black;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.mask{
+    height:100%;
+    width:100%;
+    background-color:#0DAB76;
+    opacity:0;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.dataset:hover,
+.dataset:active{
+    background-size: 110% auto;
+
+}
+
+.dataset:hover>.mask,
+.dataset:active>.mask{
+    color:white;
+    opacity:.9;
+}
+
+
+.dataset:hover>.mask>h3,
+.dataset:active>.mask>h3{
+    color:white
 }
 
 .dataset:hover .btn-Tools,
