@@ -351,4 +351,11 @@ body{
         opacity:0.8;
         font-size:.6em;
     }
+    #banner-head h1{
+        font-size:1.5em;
+    }
+    #banner-head h4,
+    #banner-head .btn{
+        font-size:.9em;
+    }
 }
