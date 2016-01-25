@@ -249,13 +249,11 @@
     });
 
     function parallaxScroll() {
-        var scrolled = $(window).scrollTop();
+        var scrolled = $(window).scrollTop(),
+            w = window.innerWidth;
         $('#banner-head').css('top', (0 - (scrolled * .28)) + 'px');
-        $('#leftCol').css('top', scrolled + 'px');
-        if(scrolled>300){
-            $('#leftCol').css('z-index', -1);
-        } else{
-            $('#leftCol').css('z-index', 1);
+        if(w>991){
+            $('#leftCol').css('top', scrolled + 'px');
         }
     }
 
