@@ -307,6 +307,9 @@ body{
 }
 
 /*Docs Style*/
+#leftCol{
+    /*position:fixed;*/
+}
 
 @media screen and (max-width : 768px) {
     .expanding-sf {
@@ -328,6 +331,9 @@ body{
         -o-transition: all 0.2s ease-in-out;
         visibility: visible;
         width: 100%;
+    }
+    #leftCol{
+        position:relative;
     }
 }
 

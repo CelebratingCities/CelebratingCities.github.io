@@ -78,8 +78,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3" id="leftCol" style="z-index:1">
-
+        <div class="col-md-3" id="leftCol">
             <ul class="nav nav-stacked" id="sidebar">
                 <li><a href="#sec0">Section 0</a></li>
                 <li><a href="#sec1">Section 1</a></li>
@@ -89,15 +88,23 @@
             </ul>
 
         </div>
+        <!--<div class="hidden-md hidden-lg" id="leftColsm">-->
+            <!--<ul class="nav nav-stacked">-->
+                <!--<li><a href="#sec0">Section 0</a></li>-->
+                <!--<li><a href="#sec1">Section 1</a></li>-->
+                <!--<li><a href="#sec2">Section 2</a></li>-->
+                <!--<li><a href="#sec3">Section 3</a></li>-->
+                <!--<li><a href="#sec4">Section 4</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
         <div class="col-md-9" id="mainCol" style="background-color:white;padding-bottom:100px;z-index:2">
 
             <br>
 
             <h2 id="sec0">Content</h2>
-            At Bootply we like to build simple Bootstrap templates that utilize the code Bootstap CSS without a lot of customization. Sure you can
-            find a lot of Bootstrap themes and inspiration, but these templates tend to be heavy on customization.
-
-
+            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
+            eos qui ratione voluptatem sequi nesciunt.
 
             <hr class="col-md-12">
             Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
@@ -181,7 +188,7 @@
 
 
 
-<div id="footerwrap">
+<div id="footerwrap" style="z-index:2">
     <div class="container text-center">
         <!--<div class="row">-->
             <div class="col-lg-4">
@@ -244,21 +251,13 @@
     function parallaxScroll() {
         var scrolled = $(window).scrollTop();
         $('#banner-head').css('top', (0 - (scrolled * .28)) + 'px');
-    }
-
-    $('#sidebar').affix({
-        offset: {
-            top: 0
+        $('#leftCol').css('top', scrolled + 'px');
+        if(scrolled>300){
+            $('#leftCol').css('z-index', -1);
+        } else{
+            $('#leftCol').css('z-index', 1);
         }
-    });
-
-    var $body   = $(document.body);
-    var navHeight = $('.navbar').outerHeight(true) + 10;
-
-    $body.scrollspy({
-        target: '#leftCol',
-        offset: navHeight
-    });
+    }
 
 </script>
 
