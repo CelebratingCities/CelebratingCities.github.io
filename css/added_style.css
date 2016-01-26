@@ -76,6 +76,34 @@ body{
     font-family: 'Lato', sans-serif;
     font-weight: 300;
 }
+#banner3{
+    /*height:40vh;*/
+    min-height:300px;
+    width:100%;
+    /*background:url("../img/dc.jpg") no-repeat top;*/
+    background-size: cover;
+    background-color: #222;
+}
+#banner3>.container>div {
+    padding-top:40px;
+    padding-bottom:60px;
+}
+#banner3>.container>div>h2,
+#banner3>.container>div>h2>p{
+    opacity:0.8;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+#banner3>.container>div>div{
+    padding-top:10px;
+    color: #0dab76;
+    /*font-size:1.2em;*/
+}
+#banner3>.container>div>div>.desc{
+    color:white;
+
+}
 
 #banner2{
     height:40vh;
