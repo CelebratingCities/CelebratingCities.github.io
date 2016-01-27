@@ -58,6 +58,11 @@ body{
     width:100%;
     z-index:-1;
 }
+
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}
+
 #banner{
     height:40vh;
     min-height:300px;
@@ -100,9 +105,11 @@ body{
     color: #0dab76;
     /*font-size:1.2em;*/
 }
-#banner3>.container>div>div>.desc{
+#banner3>.container>div>div>table{
+    table-layout:fixed;
+}
+#banner3>.container>div>div>table>tbody>tr>td>span{
     color:white;
-
 }
 
 #banner2{
