@@ -27,7 +27,8 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/uber-fonts.css">
+    <!--<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>-->
 
 </head>
 <body>
@@ -66,7 +67,7 @@
 
 <div id="banner-head" class="text-center">
     <div class="col-xs-12">
-        <h1 class="text-center vertical-align">Last Mile Hacks</h1>
+        <h1 class="text-center vertical-align" style="font-family:ff-clan-web-pro,Helvetica">Last Mile Hacks</h1>
         <hr>
         <h4>
             Join Uber and Deloitte in a collaborative effort with DOT and help drive opportunity for the
@@ -285,16 +286,21 @@
 </div>
 
 <div class="splash">
-    <div id="banner2">
-        <div class="container">
-            <div class="col-xs-12">
-                <h2 class="text-center" style="vertical-align:middle">
-                    <i>
-                        Transportation projects create pathways to jobs. Through thoughtful workforce programs — built
-                        in partnership with industry, and with a focus on disadvantaged businesses — we can help more
-                        underserved people find and keep good jobs in the transportation sector.
-                    </i>
-                </h2>
+    <div id="banner2" style="height:100%;position:relative;z-index:2">
+        <video autoplay loop class="video-grid hidden--portable hidden-xs" style="width:100%">
+            <source src="https://d1a3f4spazzrp4.cloudfront.net/developer.uber.com/video/BrandPageVid.e4866981d309a09de98e8bdf4dd322b4.webm" type="video/webm"/>
+            <source src="https://d1a3f4spazzrp4.cloudfront.net/developer.uber.com/video/BrandPageVid.38a5956e5ad026ddf8821fb467d23e2a.mp4" type="video/mp4"/>
+            <img src="https://d1a3f4spazzrp4.cloudfront.net/developer.uber.com/images/grid_banner.0b4ed80d01c3bd85a213b09b74cf9d52.png"/>
+        </video>
+        <div class="uber-overlay" style="position:absolute;top:0;left:0;z-index:3">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <h3>
+                    <!--<i>-->
+                    "Uber is evolving the way the world moves. By seamlessly connecting riders to drivers through our apps, we make cities more accessible, opening up more possibilities for riders and more business for drivers. From our founding in 2009 to our launches in hundreds of cities today, Uber's rapidly expanding global presence continues to bring people and their cities closer."
+                    <br>
+                    <br>
+                    <button class="btn btn-lg uberbtn" onclick="window.open('https://login.uber.com/login','_blank')">Sign up for our API</button>
+                </h3>
             </div>
         </div>
     </div>
