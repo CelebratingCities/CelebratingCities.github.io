@@ -35,3 +35,8 @@ function parallaxScroll() {
 function pan(city){
     map.panTo(centers[city])
 }
+
+function search() {
+    window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + document.getElementById('s').value
+    //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
+}
