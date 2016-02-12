@@ -37,6 +37,11 @@ function pan(city){
 }
 
 function search() {
-    window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + document.getElementById('s').value
+    var val = document.getElementById('s').value;
+    if(val==''){
+        window.location = 'https://dot-hackathon.data.socrata.com/';
+    } else{
+        window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + val;
+    }
     //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
 }
