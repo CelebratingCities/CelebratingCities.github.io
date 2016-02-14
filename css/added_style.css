@@ -223,6 +223,7 @@ body{
 
 .dataset:hover>.mask,
 .dataset:focus>.mask,
+.dataset:target>.mask,
 .dataset:active>.mask{
     color:white;
     opacity:.9;
