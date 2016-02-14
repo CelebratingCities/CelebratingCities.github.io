@@ -372,6 +372,12 @@ body{
     /*position:fixed;*/
 }
 
+/* apple btn */
+.appleBtn {
+    background: lightgrey;
+
+}
+
 @media only screen and (max-width : 1200px) {
     .uber-overlay>div{
         padding-top:20px;
