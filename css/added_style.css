@@ -372,11 +372,14 @@ body{
     /*position:fixed;*/
 }
 
-/* apple btn */
+/* apple fixes */
 .appleBtn {
     background: lightgrey;
-
 }
+.squared {
+    border-radius:0px;
+}
+
 
 @media only screen and (max-width : 1200px) {
     .uber-overlay>div{
