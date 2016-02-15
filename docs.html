@@ -105,52 +105,85 @@
 
             <br>
 
-            <h2 id="sec0">Celebrating Cities GeoService for public datasets</h2>
-            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-            eos qui ratione voluptatem sequi nesciunt.
+            <h2 id="sec0">Celebrating Cities Public Data GeoService</h2>
 
+            <p>
+                We have a GeoService (ArcGIS REST API) available for the hackathon. This service accepts several
+                geospatially-enabled queries parameters, which should allow you to make very specific requests.
+            </p>
             <hr class="col-md-12">
-            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut.
-            Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores
-            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-            sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!
 
+            <p><strong>The Base URL:</strong></p>
+
+            <p>
+                All datasets are currently hosted on ArcGIS Online's Open Data portal which provides
+                the GeoService API. All layers may be accessed at the following location:
+            </p>
+            <pre>http://services.arcgis.com/&ltthe layer's UID&gt/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/</pre>
+            <p>
+                You can find this address by navigating to the layer descritpion page at
+                <a href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">http://celebratingcities.deloittegeo.opendata.arcgis.com/</a>,
+                selecting 'Download Dataset' and copying the GeoService address from the API dropdown menu.
+            </p>
+
+            <p>
+                The GeoService API link will provide the REST query service which also provides links
+                to the service's metadata. To query the layer, you can either construct a query string manually or
+                use the online form provided.
+            </p>
+
+            <p>To use the GeoService, navigate to the layer in question and pull the base url from the <a
+                    href="http://zillowhack.hud.opendata.arcgis.com/">opendata page</a>
+            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/ArcGIS/rest/services/FairMarketRents/FeatureServer/0/query?where=1=1&outFields=*&outSR=4326&objectids=1&f=geojson</pre>
 
 
             <h2 id="sec1">Example Queries</h2>
+            <p>A good place to begin is in collecting all the HUD subsidized Multi-Family properties.</p>
+            <p><strong>Subsidized Multifamily Properties</strong></p>
+
+            <p>The corresponding field allows you to query for all HUD subsidized MF properties:</p>
+            <pre>is_subsidized_ind='Y'</pre>
+
             <p>
-                Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut.
+                To construct the query, we'll take the base URL, and replace the where statement "1=1"
+                with any valid SQL where statement. So for this example, we'd construct this query:
             </p>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><h3>Hello.</h3></div>
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                            Aliquam in felis sit amet augue.
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading"><h3>Hello.</h3></div>
-                        <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
-                            Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
-                            dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
-                            Aliquam in felis sit amet augue.
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/ArcGIS/rest/services/MultiFamilyProperties/FeatureServer/0/query?where=IS_SUBSIDIZED_IND='Y'&outFields=*&outSR=4326&objectids=1&f=geojson</pre>
+
+
+
+            <p><strong>Project-based Section 8 Properties</strong></p>
+
+            <p>A logical second step would be to query the Multi-Family Properties layer for low income, and the corresponding field for project-based Section 8 properties is: </p>
+            <pre>is_sec8_ind='Y'</pre>
+            <p>
+                so the query http string that returns the data in geojson looks like this:
+            </p>
+            <pre id="elderly">http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0//query?<strong>where=is_sec8_ind='Y'</strong>&f=pgeojson</pre>
+            <p>
+                Since we're focusing on Seattle, here's how we would set our input geometry:
+            </p>
+            <pre>{"xmin":-13676570.60682338,"ymin":6018679.182711435,"xmax":-13559316.205433873,"ymax":6064541.399682558,"spatialReference":{"wkid":102100}}</pre>
+            <p>
+                We then include this directly in our query using the geometry parameter:
+            </p>
+            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?where=is_sec8_ind%3D%27Y%27&<strong>geometry={"xmin":-13676570.60682338,"ymin":6018679.182711435,"xmax":-13559316.205433873,"ymax":6064541.399682558,"spatialReference":{"wkid":102100}}</strong>&f=pgeojson</pre>
+
+            <p><strong>Multifamily Elderly and Disabled Properties</strong></p>
+
+            <p>
+                For this query, we'll need to combine a few different criteria. These include:
+            </p>
+            <pre id="allquery">(1) is_sec8_202='Y'<br>(2) IS_811_CAPITAL_ADVANCE_IND='Y'<br>(3) IS_PAC_811_IND='Y'<br>(4) IS_PRAC_811_IND='Y'</pre>
+            <p>
+                To combine critera, we can use logic statments in the URL call. To include this, add the criteria
+                to the where statement with AND/OR between each criteria, as shown in the example below:
+            </p>
+            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y'</strong>&f=pgeojson</pre>
+            <p>
+                Lastly, lets trim the results down to return Seattle results only.
+            </p>
+            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=HUB_NAME_TEXT='Seattle'+AND+(IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y')</strong>&f=pgeojson</pre>
 
             <hr>
 
