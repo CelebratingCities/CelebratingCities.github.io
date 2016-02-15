@@ -75,6 +75,9 @@
 
 <div class="spacer"></div>
 
+<div id="toTop" style="">
+    <a data-toggle="tooltip" data-placement="bottom" title="Back to Top" href="#"><i class="fa fa-arrow-up fa-3x"></i></a>
+</div>
 
 <div class="container">
     <div class="row">
@@ -836,6 +839,10 @@
         }
         //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
     }
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
 
 </script>
 
