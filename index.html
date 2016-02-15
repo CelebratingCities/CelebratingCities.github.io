@@ -438,6 +438,7 @@
 
 
 <script src="js/mapscript.js"></script>
+<script src="js/search.js"></script>
 <script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
@@ -457,21 +458,21 @@
 </script>
 <!--parameter function-->
 <script>
-    function search(input) {
-        if(typeof input === 'undefined'){
-            var val = document.getElementById('s').value;
-            if(val==''){
-                window.location = 'https://dot-hackathon.data.socrata.com/';
-            } else{
-                window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + val;
-            }
-        } else if(input==0){
-            return
-        } else {
-            window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + input;
-        }
-        //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
-    }
+//    function search(input) {
+//        if(typeof input === 'undefined'){
+//            var val = document.getElementById('s').value;
+//            if(val==''){
+//                window.location = 'https://dot-hackathon.data.socrata.com/';
+//            } else{
+//                window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + val;
+//            }
+//        } else if(input==0){
+//            return
+//        } else {
+//            window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + input;
+//        }
+//        //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
+//    }
     var urlParams;
     var paramResult=0;
     (window.onpopstate = function () {

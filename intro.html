@@ -400,6 +400,7 @@
 </div>
 
 <!--<script src="js/mapscript.js"></script>-->
+<script src="js/search.js"></script>
 <script>
     $(window).bind('scroll', function (e) {
         parallaxScroll();
@@ -410,15 +411,15 @@
         $('#banner-head').css('top', (0 - (scrolled * .28)) + 'px');
     }
 
-    function search() {
-        var val = document.getElementById('s').value;
-        if(val==''){
-            window.location = 'https://dot-hackathon.data.socrata.com/';
-        } else{
-            window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + val;
-        }
-        //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
-    }
+//    function search() {
+//        var val = document.getElementById('s').value;
+//        if(val==''){
+//            window.location = 'https://dot-hackathon.data.socrata.com/';
+//        } else{
+//            window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + val;
+//        }
+//        //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
+//    }
 
 </script>
 <script>
