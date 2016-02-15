@@ -36,12 +36,3 @@ function pan(city){
     map.panTo(centers[city])
 }
 
-function search() {
-    var val = document.getElementById('s').value;
-    if(val==''){
-        window.location = 'https://dot-hackathon.data.socrata.com/';
-    } else{
-        window.location = 'https://dot-hackathon.data.socrata.com/' + 'browse?q=' + val;
-    }
-    //window.location = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/' + 'datasets?q=' + document.getElementById('s').value
-}
