@@ -25,10 +25,13 @@
     <script src='js/mapbox-gl.js'></script>
     <link href='css/mapbox-gl.css' rel='stylesheet' />
 
+    <!-- Fallback Mapbox docs -->
+    <script src='js/mapbox.js'></script>
+    <link href='css/mapbox.css' rel='stylesheet' />
+
     <!-- Fonts -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/uber-fonts.css">
-    <!--<link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>-->
 
 </head>
 <body>
@@ -70,7 +73,7 @@
         <h1 class="text-center vertical-align" style="font-family:ff-clan-web-pro,Helvetica">Celebrating Cities - Hack the Last Mile</h1>
         <hr>
         <h4>
-            Join leaders from Uber and Department of Transportation to help connect the people of the
+            Join leaders from Uber and the Department of Transportation to help connect the people of the
             <!--Join Uber in a collaborative effort with the Department of Transportation to help connect the people of the-->
             <button class="btn appleBtn" onclick="pan(1)">Baltimore</button>
             -
@@ -91,12 +94,12 @@
         <div class="col-xs-12" >
             <h3>About</h3>
             <p>
-                Celebrating Cities - Hack the Last Mile is a weekend hackathon where we'll design solutions that help
-                the residents from the Baltimore and DC metropolitan areas affordably access their places of work,
-                their schools of choice, job training opportunities, healthy food options, and other essential services
-                from any neighborhood they choose to live. A panel of judges from Uber's engineering team are looking
-                for the most innovative solution, and the winning team will have the opportunity to demo their
-                application to Uber leadership here in DC.
+                Celebrating Cities – Hack the Last Mile is a weekend event where innovators are invited to design
+                solutions that help residents of the Baltimore and DC metropolitan areas better access their places of
+                work, schools, job training opportunities, and essential services from any neighborhood they choose to
+                live. A panel of judges from Uber's engineering team will choose what they believe is the most
+                innovative solution, and the winning team will have the opportunity to demo their application to Uber
+                leadership in DC.
             </p>
             <br>
         </div>
@@ -120,8 +123,8 @@
                 <i class="fa fa-table fa-5x"></i>
                 <h3>Data</h3>
                 <p>
-                    Check out the datasets we've published specifically for the hackathon. We consolidated a number
-                    of agency datasets here and made them available through Socrata's platform.
+                    Check out the datasets we've published specifically for the hackathon. We've consolidated a number
+                    of agency datasets and made them available through Socrata's platform.
                 </p>
             </a>
             <br>
@@ -133,8 +136,8 @@
                 <i class="fa fa-book fa-5x"></i>
                 <h3>Documentation</h3>
                 <p>
-                    This is where we're providing some documentation on how the APIs work as well as provide a few usage
-                    examples. Hopefully this will help you get up and running quickly.
+                    You'll find documentation on how the APIs work as well as provide a few usage
+                    examples.
                 </p>
             </a>
             <br>
@@ -177,7 +180,7 @@
                         </tr>
                         <tr>
                             <td align="right">10:00PM</td>
-                            <td align="left"><span>Doors Close</span></td>
+                            <td align="left"><span>Kickoff Ends</span></td>
                         </tr>
 
                     </table>
@@ -207,7 +210,7 @@
                         </tr>
                         <tr>
                             <td align="right">10:00PM</td>
-                            <td align="left"><span>Doors Close</span></td>
+                            <td align="left"><span>Day Ends</span></td>
                         </tr>
 
                     </table>
@@ -280,7 +283,7 @@
         <h1>Data Providers</h1>
         <hr>
         <div class="col-xs-12 col-sm-6 col-md-3 text-center">
-            <div class="col-xs-12 dataset" style="background-image:url('img/uber-u-logo.jpg')">
+            <div class="col-xs-12 dataset" style="background-image:url('img/Uber-u-logo.png')">
                 <div class="mask">
                     <h3>Uber</h3>
                     <div class="btn-Tools">
@@ -571,9 +574,9 @@
 
             <div class="hline-w"></div>
             <p>
-                Our mission is to spur creative solutions to improve opportunity and enable fast, safe, efficient,
-                accessible and convenient transportation options that enhance the quality of life of the American
-                people, today and into the future.
+                Since day one, our mission has been to connect people with reliable rides through the use of data and
+                technology. As our footprint has grown throughout the years, so has our ability to use the Uber
+                network in different ways.
             </p>
         </div>
         <div class="col-lg-4">
@@ -581,25 +584,10 @@
 
             <div class="hline-w"></div>
             <p id="slinks">
-                <a href=""
-                   onclick="window.open('https://twitter.com/share', 'newwindow', 'width=550, height=450'); return false;"><i
-                        class="fa fa-twitter"></i></a>
-                <a href="//www.reddit.com/submit"
-                   onclick="window.open('//www.reddit.com/submit?url=' + encodeURIComponent(window.location), 'newwindow', 'width=550, height=450'); return false;"><i
-                        class="fa fa-reddit"></i></a>
-                <a href="https://news.ycombinator.com/submit"
-                   onclick="window.open('http://news.ycombinator.com/submitlink?u=' + encodeURIComponent(window.location), 'newwindow', 'width=550, height=450'); return false;"><i
-                        class="fa fa-hacker-news"></i></a>
-                <a href=""
-                   onclick="window.open('http://www.facebook.com/sharer.php?u=%22'+encodeURIComponent(document.location), 'newwindow', 'width=550, height=450'); return false;"><i
-                        class="fa fa-facebook"></i></a>
-                <a href=""
-                   onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=http://http://dot-hackathon.github.io/&title=DOT%20Uber%20Hackathonarticle&summary=Best%20hackathon%20in%20the%20galaxy&source=HUD', 'newwindow', 'width=550, height=450'); return false;"><i
-                        class="fa fa-linkedin"></i></a>
-
-                <a href=""
-                   onclick="window.open('https://plusone.google.com/_/+1/confirm?hl=en&url=<?php if(is_home()){echo home_url();}else{the_permalink();} ?>', 'newwindow', 'width=550, height=450'); return false;"><i
-                        class="fa fa-google-plus"></i></a>
+                <a href="https://twitter.com/Uber_DC" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com/uber" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/uber-com" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <a href="https://instagram.com/Uber_DC" target="_blank"><i class="fa fa-instagram"></i></a>
             </p>
         </div>
         <div class="col-lg-4">
