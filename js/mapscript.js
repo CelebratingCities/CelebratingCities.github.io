@@ -31,7 +31,7 @@ try{
     console.log(err);
     L.mapbox.accessToken = 'pk.eyJ1IjoiendoaXRtYW4iLCJhIjoiY2lqcjhwZjVrMDgwcXV5bHh0bmN5eWtxdyJ9.FQ-Fd-X4W08OL7i7ALPmxA';
     var mbUrl = 'https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png';
-    var basemap = L.tileLayer(mbUrl, {id: 'zwhitman.l2on037l'});
+    var basemap = L.tileLayer(mbUrl, {id: 'zwhitman.e2b002aa'});
     var map = L.map('map-one', {
         center: centerChoiceBU,
         zoom: 12,
