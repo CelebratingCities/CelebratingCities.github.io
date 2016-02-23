@@ -61,8 +61,8 @@
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
                 <li><a href="intro.html">Intro</a></li>
-                <!--<li><a href="https://dot-hackathon.data.socrata.com/">Data</a></li>-->
-                <li><a href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">Data</a></li>
+                <li><a href="https://celebratingcities.data.socrata.com/">Data</a></li>
+                <!--<li><a href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">Data</a></li>-->
                 <!--<li><a href="docs.html">Docs</a></li>-->
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -121,8 +121,8 @@
             </a>
         </div>
         <div class="col-xs-12 col-sm-4">
-            <!--<a href="https://dot-hackathon.data.socrata.com/">-->
-            <a href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">
+            <a href="https://celebratingcities.data.socrata.com/">
+            <!--<a href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">-->
 
                 <i class="fa fa-table fa-5x"></i>
                 <h3>Data</h3>
@@ -307,7 +307,8 @@
                 <div class="mask">
                     <h3>DOT</h3>
                     <div class="btn-Tools">
-                        <button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=DOT&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <button class="btn appleBtn" onclick="window.open('https://celebratingcities.data.socrata.com/browse?tags=dot,transportation&utf8=%E2%9C%93');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <!--<button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=DOT&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>-->
                         <!--<button class="btn appleBtn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>-->
                     </div>
                 </div>
@@ -318,7 +319,8 @@
                 <div class="mask">
                     <h3>Census</h3>
                     <div class="btn-Tools">
-                        <button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=Census&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <button class="btn appleBtn" onclick="window.open('https://celebratingcities.data.socrata.com/browse?tags=census&utf8=%E2%9C%93');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <!--<button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=Census&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>-->
                         <!--<button class="btn appleBtn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>-->
                     </div>
                 </div>
@@ -329,7 +331,8 @@
                 <div class="mask">
                     <h3>HUD</h3>
                     <div class="btn-Tools">
-                        <button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=HUD&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <!--<button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=HUD&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>-->
+                        <button class="btn appleBtn" onclick="window.open('https://celebratingcities.data.socrata.com/browse?category=HUD&utf8=%E2%9C%93');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
                         <!--<button class="btn appleBtn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>-->
                     </div>
                 </div>
@@ -346,17 +349,29 @@
                 </div>
             </div>
         </div>
-        <!--<div class="col-xs-12 col-sm-6 col-md-3">-->
-            <!--<div class="col-xs-12 dataset" style="background-image:url('img/dcmd-u-logo.jpg')">-->
-                <!--<div class="mask">-->
-                    <!--<h3>DC/MD</h3>-->
-                    <!--<div class="btn-Tools">-->
-                        <!--<button class="btn appleBtn" onclick="window.open('http://celebratingcities.deloittegeo.opendata.arcgis.com/datasets?q=HUD&sort_by=relevance');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>-->
-                        <!--&lt;!&ndash;<button class="btn appleBtn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>&ndash;&gt;-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 dataset" style="background-image:url('img/ddot.png');background-repeat: no-repeat">
+                <div class="mask">
+                    <h3>ddot</h3>
+                    <div class="btn-Tools">
+                        <button class="btn appleBtn" onclick="window.open('http://opendata.dc.gov/datasets?keyword=transportation');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <!--<button class="btn appleBtn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+            <div class="col-xs-12 dataset" style="background-image:url('img/md-logo.png');background-repeat: no-repeat">
+                <div class="mask">
+                    <h3>MD</h3>
+                    <div class="btn-Tools">
+                        <button class="btn appleBtn" onclick="window.open('http://data.imap.maryland.gov/');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>
+                        <!--<button class="btn appleBtn" onclick="window.open('http://opendata.dc.gov/datasets?keyword=transportation');" data-toggle="tooltip" data-placement="left" title="Browse API"><i class="fa fa-search"></i></button>-->
+                        <!--<button class="btn appleBtn" onclick="window.open('#');" data-toggle="tooltip" data-placement="right" title="API Link"><i class="fa fa-gears"></i></button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -396,15 +411,21 @@
         <h1>Thanks to our friends at</h1>
         <div class="col-xs-12" style="padding:50px 0 0 0">
             <div class="col-xs-12" style="margin-bottom:40px">
-                <img class="img-responsive center-block" style="max-height:300px" src="img/USDOT_sign.jpg">
+                <a href="https://www.transportation.gov/">
+                    <img class="img-responsive center-block" style="max-height:300px" src="img/USDOT_sign.jpg">
+                </a>
             </div>
             <div class="col-xs-12" style="margin-bottom:40px"></div>
             <div class="col-sm-6" style="margin-bottom:40px">
-                <img class="img-responsive center-block" style="max-height:300px" src="img/deloitte_logo.jpg">
+                <a href="https://www.deloitte.com">
+                    <img class="img-responsive center-block" style="max-height:300px" src="img/deloitte_logo.jpg">
+                </a>
             </div>
             <div class="col-xs-12 hidden-lg hidden-md hidden-sm" style="margin-bottom:40px"></div>
             <div class="col-sm-6" style="margin-bottom:100px">
-                <img class="img-responsive center-block" style="max-height:61px" src="img/socrata_logo.png">
+                <a href="https://www.socrata.com/">
+                    <img class="img-responsive center-block" style="max-height:61px" src="img/socrata_logo.png">
+                </a>
             </div>
         </div>
     </div>

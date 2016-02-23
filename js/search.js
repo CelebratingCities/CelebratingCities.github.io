@@ -4,12 +4,12 @@
  */
 
 //socrata
-//var baseURL = 'https://dot-hackathon.data.socrata.com/',
-//    qParam = 'browse?q=';
+var baseURL = 'https://celebratingcities.data.socrata.com/',
+    qParam = 'browse?q=';
 
 //openData
-var baseURL = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/',
-    qParam = 'datasets?q=';
+//var baseURL = 'http://celebratingcities.deloittegeo.opendata.arcgis.com/',
+//    qParam = 'datasets?q=';
 
 function search(input) {
     if(typeof input === 'undefined'){
