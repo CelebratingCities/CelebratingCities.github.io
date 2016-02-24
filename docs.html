@@ -85,8 +85,8 @@
         <div class="col-md-3" id="leftCol">
             <ul class="nav nav-stacked" id="sidebar">
                 <li><a href="#sec0">Introduction</a></li>
-                <li><a href="#sec1">Example Queries</a></li>
-                <li><a href="#sec2">Query Parameters</a></li>
+                <li><a href="#sec1">Getting Started</a></li>
+                <li><a href="#sec2">Example Queries</a></li>
                 <li><a href="#sec3">Data Dictionaries</a></li>
                 <ul>
                     <li><a href="#dd0">Location Affordability Index</a></li>
@@ -108,270 +108,83 @@
         <div class="col-md-9" id="mainCol" style="background-color:white;padding-bottom:100px">
 
             <br>
-
-            <h2 id="sec0">Celebrating Cities Public Data GeoService</h2>
-
+            <h2 id='sec0'>Celebrating Cities Public Data API Service</h2>
             <p>
-                We have a GeoService (ArcGIS REST API) available for the hackathon. This service accepts several
-                geospatially-enabled queries parameters, which should allow you to make very specific requests.
-            </p>
-            <hr class="col-md-12">
-
-            <p><strong>The Base URL:</strong></p>
-
-            <p>
-                All datasets are currently hosted on ArcGIS Online's Open Data portal which provides
-                the GeoService API. All layers may be accessed at the following location:
-            </p>
-            <pre>http://services.arcgis.com/&ltthe layer's UID&gt/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/</pre>
-            <p>
-                You can find this address by navigating to the layer descritpion page
-                <a href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">here</a>,
-
-                selecting 'Download Dataset' and copying the GeoService address from the API dropdown menu.
-            </p>
-
-            <p>
-                The GeoService API link will provide the REST query service which also provides links
-                to the service's metadata. To query the layer, you can either construct a query string manually or
-                use the online form provided.
-            </p>
-
-            <p>To use the GeoService, navigate to the layer in question and pull the base url from the <a
-                    href="http://celebratingcities.deloittegeo.opendata.arcgis.com/">opendata page</a>
-            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/ArcGIS/rest/services/FairMarketRents/FeatureServer/0/query?where=1=1&outFields=*&outSR=4326&objectids=1&f=geojson</pre>
-
-
-            <h2 id="sec1">Example Queries</h2>
-            <p>A good place to begin is in collecting all the HUD subsidized Multi-Family properties.</p>
-            <p><strong>Subsidized Multifamily Properties</strong></p>
-
-            <p>The corresponding field allows you to query for all HUD subsidized MF properties:</p>
-            <pre>is_subsidized_ind='Y'</pre>
-
-            <p>
-                To construct the query, we'll take the base URL, and replace the where statement "1=1"
-                with any valid SQL where statement. So for this example, we'd construct this query:
-            </p>
-            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/ArcGIS/rest/services/MultiFamilyProperties/FeatureServer/0/query?where=IS_SUBSIDIZED_IND='Y'&outFields=*&outSR=4326&objectids=1&f=geojson</pre>
-
-
-
-            <p><strong>Project-based Section 8 Properties</strong></p>
-
-            <p>A logical second step would be to query the Multi-Family Properties layer for low income, and the corresponding field for project-based Section 8 properties is: </p>
-            <pre>is_sec8_ind='Y'</pre>
-            <p>
-                so the query http string that returns the data in geojson looks like this:
-            </p>
-            <pre id="elderly">http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0//query?<strong>where=is_sec8_ind='Y'</strong>&f=pgeojson</pre>
-            <p>
-                Since we're focusing on Seattle, here's how we would set our input geometry:
-            </p>
-            <pre>{"xmin":-13676570.60682338,"ymin":6018679.182711435,"xmax":-13559316.205433873,"ymax":6064541.399682558,"spatialReference":{"wkid":102100}}</pre>
-            <p>
-                We then include this directly in our query using the geometry parameter:
-            </p>
-            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?where=is_sec8_ind%3D%27Y%27&<strong>geometry={"xmin":-13676570.60682338,"ymin":6018679.182711435,"xmax":-13559316.205433873,"ymax":6064541.399682558,"spatialReference":{"wkid":102100}}</strong>&f=pgeojson</pre>
-
-            <p><strong>Multifamily Elderly and Disabled Properties</strong></p>
-
-            <p>
-                For this query, we'll need to combine a few different criteria. These include:
-            </p>
-            <pre id="allquery">(1) is_sec8_202='Y'<br>(2) IS_811_CAPITAL_ADVANCE_IND='Y'<br>(3) IS_PAC_811_IND='Y'<br>(4) IS_PRAC_811_IND='Y'</pre>
-            <p>
-                To combine critera, we can use logic statments in the URL call. To include this, add the criteria
-                to the where statement with AND/OR between each criteria, as shown in the example below:
-            </p>
-            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y'</strong>&f=pgeojson</pre>
-            <p>
-                Lastly, lets trim the results down to return Seattle results only.
-            </p>
-            <pre>http://services.arcgis.com/VTyQ9soqVukalItT/arcgis/rest/services/MultiFamilyProperties/FeatureServer/0/query?<strong>where=HUB_NAME_TEXT='Seattle'+AND+(IS_811_CAPITAL_ADVANCE_IND='Y'+OR+IS_PAC_811_IND='Y'+OR+IS_PRAC_811_IND='Y')</strong>&f=pgeojson</pre>
-
-            <hr>
-
-            <h2 id="sec2">All Query Parameters</h2>
-            <div class="table-responsive">
-                <table class="table">
-                <thead>
-                <tr>
-                    <th>Parameter</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Where</td>
-                    <td>A where clause for the query filter. Any legal SQL where clause operating on the fields
-                        in the layer is allowed.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Object IDs</td>
-                    <td>The object IDs of this layer/table to be queried.</td>
-                </tr>
-                <tr>
-                    <td>Time</td>
-                    <td>The time instant or the time extent to query.<br>
-                        <strong>Time instant</strong><br>
-                        <em>Syntax:&nbsp</em> <span class="code">time=timeInstant</span><br>
-                <em>Example:&nbsp</em><span class="code"> time=1199145600000</span><br>
-                <strong>Time extent</strong><br>
-                <em>Syntax:&nbsp</em> <span class="code"> time=startTime, endTime</span><br>
-                <em>Example:&nbsp</em><span class="code"> time=1199145600000, 1230768000000</span><br>
-                </td>
-                </tr>
-                <tr>
-                    <td>Input Geometry</td>
-                    <td>
-                        The geometry to apply as the spatial filter. The structure of the geometry
-                        is the same as the structure of the json geometry objects returned by the
-                        ArcGIS REST API. In addition to the json structures, for envelopes and points,
-                        you can specify the geometry with a simpler comma-separated syntax.<br>
-                        <em>Syntax:</em><br>
-                        <ul style="margin-left:15px">
-                            <li>json structures:&nbsp <span class="code">geometryType=&ltgeometryType&gt&geometry={geometry}</span>
-                            </li>
-                            <li>Envelope simple syntax:&nbsp <span class="code">geometryType=esriGeometryEnvelope&geometry=&ltxmin&gt,&ltymin&gt,&ltxmax&gt,&ltymax&gt}</span>
-                            </li>
-                            <li>Point simple syntax:&nbsp <span class="code">geometryType=esriGeometryPoint&geometry=&ltx&gt,&lty&gt</span>
-                            </li>
-                        </ul>
-                        <em>Examples:</em><br>
-                        <ul style="margin-left:15px">
-                            <li><span class="code">geometryType=&ltgeometryType&gt&geometry={xmin: -104, ymin: 35.6, xmax: -94.32, ymax: 41}</span>
-                            </li>
-                            <li><span class="code">geometryType=esriGeometryEnvelope&geometry=-104,35.6,-94.32,41</span>
-                            </li>
-                            <li><span class="code">geometryType=esriGeometryPoint&geometry=-104,35.6</span></li>
-                        </ul>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Geometry Type</td>
-                    <td>
-                        The type of geometry specified by the geometry parameter. The geometry type can be an envelope,
-                        point, line, or polygon. The default geometry type is an envelope.
-                        <br>
-                        <em>Values:</em><span class="code">&nbspesriGeometryPoint | esriGeometryMultipoint | esriGeometryPolyline | esriGeometryPolygon | esriGeometryEnvelope</span>
-                    </td>
-
-                </tr>
-                <tr>
-                    <td>Input Spatial Reference</td>
-                    <td>
-                        The spatial relationship to be applied on the input geometry while performing the query. The
-                        supported spatial relationships include intersects, contains, envelope intersects, within, etc.
-                        The default spatial relationship is intersects (esriSpatialRelIntersects).
-                        <em>Options are:</em>&nbsp intersects, contains, crosses, envelope intersects, index intersects,
-                        overlaps,
-                        touches, and within.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Distance</td>
-                    <td>Distance to buffer input geometry.</td>
-                </tr>
-                <tr>
-                    <td>Units</td>
-                    <td>Return distance values in the specified units. Options are meters, miles, feet, kilometers,
-                        nautical miles, and US nautical miles.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Out Fields</td>
-                    <td>Attribute fields to include in response. Default is all (*).</td>
-                </tr>
-                <tr>
-                    <td>Return Geometry</td>
-                    <td>Boolean parameter. If 'true', each feature in the FeatureSet includes the geometry.</td>
-                </tr>
-                <tr>
-                    <td>Max Allowable Offset</td>
-                    <td>The maximum allowable offset used for generalizing geometries returned by the query operation.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Geometry Precision</td>
-                    <td>Specify the number of decimal places for the geometries returned by the query operation.</td>
-                </tr>
-                <tr>
-                    <td>Output Spatial Reference</td>
-                    <td>The spatial reference for the returned geometry.</td>
-                </tr>
-                <tr>
-                    <td>Return IDs Only</td>
-                    <td> If true, the response only includes an array of object IDs. Otherwise the response is a feature
-                        set. The default is false.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Return Count Only</td>
-                    <td>If true, the response only includes the count (number of features/records) that would be
-                        returned by a query. Otherwise the response is a feature set. The default is false. This option
-                        supersedes the returnIdsOnly parameter.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Return Extent Only</td>
-                    <td>Boolean parameter set to return the query features extent only.</td>
-                </tr>
-                <tr>
-                    <td>Order By Fields</td>
-                    <td>One or more field names using the features/records that need to be ordered. Use ASC or DESC for
-                        ascending or desending order respectively.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Group By Fields</td>
-                    <td>Group by fields (for statistics).</td>
-                </tr>
-                <tr>
-                    <td>Output Statistics</td>
-                    <td>The definitions for one or more field-based statistics to be calculated.</td>
-                </tr>
-                <tr>
-                    <td>Result Offset</td>
-                    <td>This option can be used for fetching query results by skipping the specified number of records
-                        and starts from the next record (i.e.resultOffset + 1th). The Default is 0.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Result Record Count</td>
-                    <td>This option can be used for fetching query results up to the resultRecordCount specified. When
-                        resultOffset is specified but this parameter is not, map service defaults it to maxRecordCount.
-                        The maximum value for this parameter is the value of the layer's maxRecordCount property.
-                    </td>
-                </tr>
-                <tr>
-                    <td>ReturnZ</td>
-                    <td>If true, the Z values will be included in the results if the features have Z values. Otherwise Z
-                        values are not returned. The default is false.
-                    </td>
-                </tr>
-                <tr>
-                    <td>ReturnM</td>
-                    <td>If true, M values will be included in the results if the features have m values. Otherwise, M
-                        values are not returned. The default is false.
-                    </td>
-                </tr>
-                <tr>
-                    <td>Quantization Parameters</td>
-                    <td>Used to project the geometry onto a virtual grid, likely representing pixels on the screen.</td>
-                </tr>
-                <tr>
-                    <td>Format</td>
-                    <td>The response format. Default format is html but options include html, json, and geojson</td>
-                </tr>
-                </tbody>
-                </table>
-
-            </div>
-
-            <hr>
-
+              So you want to win that hackathon or build the next hot open data app? Follow this guide to get yourself started. Make sure you check out the more detailed resources in Socrata's
+              <a href='dev.socrata.com' target='_blank'>Dev Portal</a>
+              when it’s time to get in deep
+              <p>
+                <p>
+                  We are using Socrata's REST API,
+                  <a href='https://dev.socrata.com/consumers/getting-started.html' target='_blank'>SODA API</a>
+                  . This service accepts several queries, including geospatially-enabled queries, which should allow you to make very specific requests.
+                </p>
+                <hr class='col-md-12'>
+                  <h2 id='sec1'>Getting Started</h2>
+                  <p>
+                    All datasets are currently hosted on
+                    <a href='https://celebratingcities.data.socrata.com/' target='_blank'>Socrata's Open Data portal</a>
+                    which provides the REST
+                    <a href='https://dev.socrata.com/consumers/getting-started.html' target='_blank'>SODA API</a>.
+                  </p>
+                  <p>
+                    Every
+                    <a href='http://www.socrata.com' target='_blank'>Socrata</a>
+                    open dataset has a built-in SODA API. But how you find the API endpoint can vary a bit.
+                  </p>
+                  <p>If you’re viewing a DataLens, there will be a prominent “API” button in the upper left of the page. Click that, and you’ll get details on the API endpoint and a link to API documentation.</p>
+                  <p>
+                    If you’re on a Socrata dataset, identifiable by the colorful buttons at the upper right, don’t fret. Every Socrata dataset has a built-in open data API, so you’ll be just fine. Click on
+                    <code class='highlighter-rouge'>Export</code>
+                    and then
+                    <code class='highlighter-rouge'>API</code>
+                    and you’ll find the API endpoint under
+                    <code class='highlighter-rouge'>API Access Endpoint</code>.
+                    <div class='well'>
+                      Read the detailed documentation on
+                      <a href='https://dev.socrata.com/docs/endpoints.html' target='_blank'>API Endpoints</a>
+                      for more info.
+                    </div>
+                  </p>
+                  <p>
+                    For this example, we’ll use this listing of
+                    <a href='https://celebratingcities.data.socrata.com/DC/DC-Crime-Incidents-2015/ry83-tbhc' target='_blank'>DC Crime Incidents 2015.</a>
+                  </p>
+                  <pre><a href='https://celebratingcities.data.socrata.com/resource/j6b8-wjwi.json' target='_blank'>https://celebratingcities.data.socrata.com/resource/j6b8-wjwi.json</a></pre>
+                  <p>That url, found on the dataset page, will be your API endpoint. Now let's move on to doing some sample queries.</p>
+                  <h2 id='sec2'>Example Queries</h2>
+                  <p>
+                    <strong>Simple Filters</strong>
+                  </p>
+                  <p>
+                    Filtering data is very straightforward. SODA APIs are self-describing — the schema and contents of the dataset itself determines how you can query it. Any field within the data can be used as a filter, simply by appending it to the API endpoint as a GET parameter. For example, to query for only
+                    <code>BURGLARY</code>
+                    offences, simply append
+                    <code>?offense=BURGLARY</code>
+                    to the url:
+                  </p>
+                  <pre><a href='https://celebratingcities.data.socrata.com/resource/j6b8-wjwi.json?offense=BURGLARY' target='_blank'>https://celebratingcities.data.socrata.com/resource/j6b8-wjwi.json?offense=BURGLARY</a></pre>
+                  <p>
+                    Additional filters can be added, and the filters will be
+                    <code class='highlighter-rouge'>AND</code>ed
+                  </p>
+                  <div class='well'>
+                    Read the detailed documentation on
+                    <a href='https://dev.socrata.com/docs/filtering.html' target='_blank'>Filtering Datasets</a>
+                    for more info.
+                  </div>
+                  <p>
+                    <strong>SoQL Queries</strong>
+                  </p>
+                  <p>
+                    The “Socrata Query Language” (SoQL) is a simple, SQL-like query language specifically designed for making it easy to work with data on the web. The language is both powerful and easy to learn, and everything works via GET parameters. For example, to search for crimes in in Dupont Circle:
+                  </p>
+                  <pre><a href='https://celebratingcities.data.socrata.com/resource/j6b8-wjwi.json?$where=within_box(the_geom, 38.9056366947, -77.0466792583, 38.911497437, -77.0384395123)' target='_blank'>https://celebratingcities.data.socrata.com/resource/j6b8-wjwi.json?$where=within_box(the_geom, 38.9056366947, -77.0466792583, 38.911497437, -77.0384395123)</a></pre>
+                  <div class='well'>
+                    Many different functions are available via SoQL. Read the detailed documentation on
+                    <a href='https://dev.socrata.com/docs/queries/' target='_blank'>SoQL Queries</a>
+                    for more info.
+                  </div>
             <h2 id="sec3">Data Dictionaries</h2>
             <div> <!-- dd container -->
                 <h3 id="dd0" class="table-head">Location Affordability Index</h3>
