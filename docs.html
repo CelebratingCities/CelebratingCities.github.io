@@ -90,6 +90,10 @@
                 <li><a href="#sec3">Data Dictionaries</a></li>
                 <ul>
                     <li><a href="#dd0">Location Affordability Index</a></li>
+                    <li><a href="#dd1">LEHD LODES 7 Origin-Destination Matrix 2013</a></li>
+                    <li><a href="#dd2">LEHD LODES 7 Residence Area Characteristics 2013</a></li>
+                    <li><a href="#dd3">LEHD LODES 7 Workplace Area Characteristics 2014</a></li>
+                    <li><a href="#dd4">Environmental Justice Indices</a></li>
                     <!--<li><a href="#dd1">Test1</a></li>-->
                 </ul>
                 <!--<li><a href="#sec4">FAQs</a></li>-->
@@ -377,7 +381,6 @@
                 <h3 id="dd0" class="table-head">Location Affordability Index</h3>
                 <h4><a href="https://celebratingcities.data.socrata.com/HUD/DMV-LAI/tui2-mz82" target="_blank">Dataset</a></h4>
                 <div class="table-responsive">
-
                     <table class="table">
                         <thead>
                         <tr>
@@ -959,183 +962,762 @@
                         </tbody>
                     </table>
                 </div>
-                <!--<h3 id="dd1" class="table-head">Test1</h3>-->
-                <!--<div class="table-responsive">-->
-                    <!--<table class="table">-->
-                        <!--<thead>-->
-                        <!--<tr>-->
-                            <!--<th>Parameter</th>-->
-                            <!--<th>Description</th>-->
-                        <!--</tr>-->
-                        <!--</thead>-->
-                        <!--<tbody>-->
-                        <!--<tr>-->
-                            <!--<td>Where</td>-->
-                            <!--<td>A where clause for the query filter. Any legal SQL where clause operating on the fields-->
-                                <!--in the layer is allowed.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Object IDs</td>-->
-                            <!--<td>The object IDs of this layer/table to be queried.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Time</td>-->
-                            <!--<td>The time instant or the time extent to query.<br>-->
-                                <!--<strong>Time instant</strong><br>-->
-                                <!--<em>Syntax:&nbsp</em> <span class="code">time=timeInstant</span><br>-->
-                                <!--<em>Example:&nbsp</em><span class="code"> time=1199145600000</span><br>-->
-                                <!--<strong>Time extent</strong><br>-->
-                                <!--<em>Syntax:&nbsp</em> <span class="code"> time=startTime, endTime</span><br>-->
-                                <!--<em>Example:&nbsp</em><span class="code"> time=1199145600000, 1230768000000</span><br>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Input Geometry</td>-->
-                            <!--<td>-->
-                                <!--The geometry to apply as the spatial filter. The structure of the geometry-->
-                                <!--is the same as the structure of the json geometry objects returned by the-->
-                                <!--ArcGIS REST API. In addition to the json structures, for envelopes and points,-->
-                                <!--you can specify the geometry with a simpler comma-separated syntax.<br>-->
-                                <!--<em>Syntax:</em><br>-->
-                                <!--<ul style="margin-left:15px">-->
-                                    <!--<li>json structures:&nbsp <span class="code">geometryType=&ltgeometryType&gt&geometry={geometry}</span>-->
-                                    <!--</li>-->
-                                    <!--<li>Envelope simple syntax:&nbsp <span class="code">geometryType=esriGeometryEnvelope&geometry=&ltxmin&gt,&ltymin&gt,&ltxmax&gt,&ltymax&gt}</span>-->
-                                    <!--</li>-->
-                                    <!--<li>Point simple syntax:&nbsp <span class="code">geometryType=esriGeometryPoint&geometry=&ltx&gt,&lty&gt</span>-->
-                                    <!--</li>-->
-                                <!--</ul>-->
-                                <!--<em>Examples:</em><br>-->
-                                <!--<ul style="margin-left:15px">-->
-                                    <!--<li><span class="code">geometryType=&ltgeometryType&gt&geometry={xmin: -104, ymin: 35.6, xmax: -94.32, ymax: 41}</span>-->
-                                    <!--</li>-->
-                                    <!--<li><span class="code">geometryType=esriGeometryEnvelope&geometry=-104,35.6,-94.32,41</span>-->
-                                    <!--</li>-->
-                                    <!--<li><span class="code">geometryType=esriGeometryPoint&geometry=-104,35.6</span></li>-->
-                                <!--</ul>-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Geometry Type</td>-->
-                            <!--<td>-->
-                                <!--The type of geometry specified by the geometry parameter. The geometry type can be an envelope,-->
-                                <!--point, line, or polygon. The default geometry type is an envelope.-->
-                                <!--<br>-->
-                                <!--<em>Values:</em><span class="code">&nbspesriGeometryPoint | esriGeometryMultipoint | esriGeometryPolyline | esriGeometryPolygon | esriGeometryEnvelope</span>-->
-                            <!--</td>-->
 
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Input Spatial Reference</td>-->
-                            <!--<td>-->
-                                <!--The spatial relationship to be applied on the input geometry while performing the query. The-->
-                                <!--supported spatial relationships include intersects, contains, envelope intersects, within, etc.-->
-                                <!--The default spatial relationship is intersects (esriSpatialRelIntersects).-->
-                                <!--<em>Options are:</em>&nbsp intersects, contains, crosses, envelope intersects, index intersects,-->
-                                <!--overlaps,-->
-                                <!--touches, and within.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Distance</td>-->
-                            <!--<td>Distance to buffer input geometry.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Units</td>-->
-                            <!--<td>Return distance values in the specified units. Options are meters, miles, feet, kilometers,-->
-                                <!--nautical miles, and US nautical miles.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Out Fields</td>-->
-                            <!--<td>Attribute fields to include in response. Default is all (*).</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Return Geometry</td>-->
-                            <!--<td>Boolean parameter. If 'true', each feature in the FeatureSet includes the geometry.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Max Allowable Offset</td>-->
-                            <!--<td>The maximum allowable offset used for generalizing geometries returned by the query operation.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Geometry Precision</td>-->
-                            <!--<td>Specify the number of decimal places for the geometries returned by the query operation.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Output Spatial Reference</td>-->
-                            <!--<td>The spatial reference for the returned geometry.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Return IDs Only</td>-->
-                            <!--<td> If true, the response only includes an array of object IDs. Otherwise the response is a feature-->
-                                <!--set. The default is false.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Return Count Only</td>-->
-                            <!--<td>If true, the response only includes the count (number of features/records) that would be-->
-                                <!--returned by a query. Otherwise the response is a feature set. The default is false. This option-->
-                                <!--supersedes the returnIdsOnly parameter.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Return Extent Only</td>-->
-                            <!--<td>Boolean parameter set to return the query features extent only.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Order By Fields</td>-->
-                            <!--<td>One or more field names using the features/records that need to be ordered. Use ASC or DESC for-->
-                                <!--ascending or desending order respectively.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Group By Fields</td>-->
-                            <!--<td>Group by fields (for statistics).</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Output Statistics</td>-->
-                            <!--<td>The definitions for one or more field-based statistics to be calculated.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Result Offset</td>-->
-                            <!--<td>This option can be used for fetching query results by skipping the specified number of records-->
-                                <!--and starts from the next record (i.e.resultOffset + 1th). The Default is 0.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Result Record Count</td>-->
-                            <!--<td>This option can be used for fetching query results up to the resultRecordCount specified. When-->
-                                <!--resultOffset is specified but this parameter is not, map service defaults it to maxRecordCount.-->
-                                <!--The maximum value for this parameter is the value of the layer's maxRecordCount property.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>ReturnZ</td>-->
-                            <!--<td>If true, the Z values will be included in the results if the features have Z values. Otherwise Z-->
-                                <!--values are not returned. The default is false.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>ReturnM</td>-->
-                            <!--<td>If true, M values will be included in the results if the features have m values. Otherwise, M-->
-                                <!--values are not returned. The default is false.-->
-                            <!--</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Quantization Parameters</td>-->
-                            <!--<td>Used to project the geometry onto a virtual grid, likely representing pixels on the screen.</td>-->
-                        <!--</tr>-->
-                        <!--<tr>-->
-                            <!--<td>Format</td>-->
-                            <!--<td>The response format. Default format is html but options include html, json, and geojson</td>-->
-                        <!--</tr>-->
-                        <!--</tbody>-->
-                    <!--</table>-->
+                <h3 id="dd1" class="table-head">LEHD LODES 7 Origin-Destination Matrix 2013</h3>
+                <h4><a href="https://celebratingcities.data.socrata.com/HUD/DMV-LAI/tui2-mz82" target="_blank">Dataset</a></h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead><tr><th title="Field #1">Pos</th>
+                            <th title="Field #2">Variable</th>
+                            <th title="Field #3">Type</th>
+                            <th title="Field #4">Explanation</th>
+                        </tr></thead>
+                        <tbody><tr><td align="right">1</td>
+                            <td>w_geocode</td>
+                            <td>Char15</td>
+                            <td>Workplace Census Block Code</td>
+                        </tr>
+                        <tr><td align="right">2</td>
+                            <td>h_geocode</td>
+                            <td>Char15</td>
+                            <td>Residence Census Block Code</td>
+                        </tr>
+                        <tr><td align="right">3</td>
+                            <td>S000</td>
+                            <td>Num</td>
+                            <td>Total number of jobs</td>
+                        </tr>
+                        <tr><td align="right">4</td>
+                            <td>SA01</td>
+                            <td>Num</td>
+                            <td>Number of jobs of workers age 29 or younger11</td>
+                        </tr>
+                        <tr><td align="right">5</td>
+                            <td>SA02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 30 to 5411</td>
+                        </tr>
+                        <tr><td align="right">6</td>
+                            <td>SA03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 55 or older11</td>
+                        </tr>
+                        <tr><td align="right">7</td>
+                            <td>SE01</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings $1250/month or less</td>
+                        </tr>
+                        <tr><td align="right">8</td>
+                            <td>SE02</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings $1251/month to $3333/month</td>
+                        </tr>
+                        <tr><td align="right">9</td>
+                            <td>SE03</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings greater than $3333/month</td>
+                        </tr>
+                        <tr><td align="right">10</td>
+                            <td>SI01</td>
+                            <td>Num</td>
+                            <td>Number of jobs in Goods Producing industry sectors</td>
+                        </tr>
+                        <tr><td align="right">11</td>
+                            <td>SI02</td>
+                            <td>Num</td>
+                            <td>Number of jobs in Trade, Transportation, and Utilities industry sectors</td>
+                        </tr>
+                        <tr><td align="right">12</td>
+                            <td>SI03</td>
+                            <td>Num</td>
+                            <td>Number of jobs in All Other Services industry sectors</td>
+                        </tr>
+                        <tr><td align="right">13</td>
+                            <td>createdate</td>
+                            <td>Char</td>
+                            <td>Date on which data was created, formatted as YYYYMMDD</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-                <!--</div>-->
+
+                <h3 id="dd2" class="table-head">LEHD LODES 7 Residence Area Characteristics 2013</h3>
+                <h4><a href="https://celebratingcities.data.socrata.com/HUD/DMV-LAI/tui2-mz82" target="_blank">Dataset</a></h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead><tr><th title="Field #1">Pos</th>
+                            <th title="Field #2">Variable</th>
+                            <th title="Field #3">Type</th>
+                            <th title="Field #4">Explanation</th>
+                        </tr></thead>
+                        <tbody><tr><td align="right">1</td>
+                            <td>h_geocode</td>
+                            <td>Char15</td>
+                            <td>Residence Census Block Code</td>
+                        </tr>
+                        <tr><td align="right">2</td>
+                            <td>C000</td>
+                            <td>Num</td>
+                            <td>Total number of jobs</td>
+                        </tr>
+                        <tr><td align="right">3</td>
+                            <td>CA01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 29 or younger11</td>
+                        </tr>
+                        <tr><td align="right">4</td>
+                            <td>CA02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 30 to 5411</td>
+                        </tr>
+                        <tr><td align="right">5</td>
+                            <td>CA03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 55 or older11</td>
+                        </tr>
+                        <tr><td align="right">6</td>
+                            <td>CE01</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings $1250/month or less</td>
+                        </tr>
+                        <tr><td align="right">7</td>
+                            <td>CE02</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings $1251/month to $3333/month</td>
+                        </tr>
+                        <tr><td align="right">8</td>
+                            <td>CE03</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings greater than $3333/month</td>
+                        </tr>
+                        <tr><td align="right">9</td>
+                            <td>CNS01</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 11 (Agriculture, Forestry, Fishing and Hunting)</td>
+                        </tr>
+                        <tr><td align="right">10</td>
+                            <td>CNS02</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 21 (Mining, Quarrying, and Oil and Gas Extraction)</td>
+                        </tr>
+                        <tr><td align="right">11</td>
+                            <td>CNS03</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 22 (Utilities)</td>
+                        </tr>
+                        <tr><td align="right">12</td>
+                            <td>CNS04</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 23 (Construction)</td>
+                        </tr>
+                        <tr><td align="right">13</td>
+                            <td>CNS05</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 31-33 (Manufacturing)</td>
+                        </tr>
+                        <tr><td align="right">14</td>
+                            <td>CNS06</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 42 (Wholesale Trade)</td>
+                        </tr>
+                        <tr><td align="right">15</td>
+                            <td>CNS07</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 44-45 (Retail Trade)</td>
+                        </tr>
+                        <tr><td align="right">16</td>
+                            <td>CNS08</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 48-49 (Transportation and Warehousing)</td>
+                        </tr>
+                        <tr><td align="right">17</td>
+                            <td>CNS09</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 51 (Information)</td>
+                        </tr>
+                        <tr><td align="right">18</td>
+                            <td>CNS10</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 52 (Finance and Insurance)</td>
+                        </tr>
+                        <tr><td align="right">19</td>
+                            <td>CNS11</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 53 (Real Estate and Rental and Leasing)</td>
+                        </tr>
+                        <tr><td align="right">20</td>
+                            <td>CNS12</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 54 (Professional, Scientific, and Technical Services)</td>
+                        </tr>
+                        <tr><td align="right">21</td>
+                            <td>CNS13</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 55 (Management of Companies and Enterprises)</td>
+                        </tr>
+                        <tr><td align="right">22</td>
+                            <td>CNS14</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 56 (Administrative and Support and Waste<br/>Management and Remediation Services)</td>
+                        </tr>
+                        <tr><td align="right">23</td>
+                            <td>CNS15</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 61 (Educational Services)</td>
+                        </tr>
+                        <tr><td align="right">24</td>
+                            <td>CNS16</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 62 (Health Care and Social Assistance)</td>
+                        </tr>
+                        <tr><td align="right">25</td>
+                            <td>CNS17</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 71 (Arts, Entertainment, and Recreation)</td>
+                        </tr>
+                        <tr><td align="right">26</td>
+                            <td>CNS18</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 72 (Accommodation and Food Services)</td>
+                        </tr>
+                        <tr><td align="right">27</td>
+                            <td>CNS19</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 81 (Other Services [except Public Administration])</td>
+                        </tr>
+                        <tr><td align="right">28</td>
+                            <td>CNS20</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 92 (Public Administration)</td>
+                        </tr>
+                        <tr><td align="right">29</td>
+                            <td>CR01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: White, Alone</td>
+                        </tr>
+                        <tr><td align="right">30</td>
+                            <td>CR02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Black or African American Alone</td>
+                        </tr>
+                        <tr><td align="right">31</td>
+                            <td>CR03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: American Indian or Alaska Native Alone</td>
+                        </tr>
+                        <tr><td align="right">32</td>
+                            <td>CR04</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Asian Alone</td>
+                        </tr>
+                        <tr><td align="right">33</td>
+                            <td>CR05</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Native Hawaiian or Other Pacific Islander Alone</td>
+                        </tr>
+                        <tr><td align="right">34</td>
+                            <td>CR07</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Two or More Race Groups</td>
+                        </tr>
+                        <tr><td align="right">35</td>
+                            <td>CT01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Ethnicity: Not Hispanic or Latino</td>
+                        </tr>
+                        <tr><td align="right">36</td>
+                            <td>CT02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Ethnicity: Hispanic or Latino</td>
+                        </tr>
+                        <tr><td align="right">37</td>
+                            <td>CD01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: Less than high school</td>
+                        </tr>
+                        <tr><td align="right">38</td>
+                            <td>CD02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: High school or equivalent, no college</td>
+                        </tr>
+                        <tr><td align="right">39</td>
+                            <td>CD03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: Some college or Associate degree</td>
+                        </tr>
+                        <tr><td align="right">40</td>
+                            <td>CD04</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: Bachelor&#39;s degree or advanced degree</td>
+                        </tr>
+                        <tr><td align="right">41</td>
+                            <td>CS01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Sex: Male</td>
+                        </tr>
+                        <tr><td align="right">42</td>
+                            <td>CS02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Sex: Female</td>
+                        </tr>
+                        <tr><td align="right">43</td>
+                            <td>createdate</td>
+                            <td>Char</td>
+                            <td>Date on which data was created, formatted as YYYYMMDD</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h3 id="dd3" class="table-head">LEHD LODES 7 Workplace Area Characteristics 2014</h3>
+                <h4><a href="https://celebratingcities.data.socrata.com/HUD/DMV-LAI/tui2-mz82" target="_blank">Dataset</a></h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead><tr><th title="Field #1">Pos</th>
+                            <th title="Field #2">Variable</th>
+                            <th title="Field #3">Type</th>
+                            <th title="Field #4">Explanation</th>
+                        </tr></thead>
+                        <tbody><tr><td align="right">1</td>
+                            <td>w_geocode</td>
+                            <td>Char15</td>
+                            <td>Workplace Census Block Code</td>
+                        </tr>
+                        <tr><td align="right">2</td>
+                            <td>C000</td>
+                            <td>Num</td>
+                            <td>Total number of jobs</td>
+                        </tr>
+                        <tr><td align="right">3</td>
+                            <td>CA01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 29 or younger</td>
+                        </tr>
+                        <tr><td align="right">4</td>
+                            <td>CA02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 30 to 54</td>
+                        </tr>
+                        <tr><td align="right">5</td>
+                            <td>CA03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers age 55 or older</td>
+                        </tr>
+                        <tr><td align="right">6</td>
+                            <td>CE01</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings $1250/month or less</td>
+                        </tr>
+                        <tr><td align="right">7</td>
+                            <td>CE02</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings $1251/month to $3333/month</td>
+                        </tr>
+                        <tr><td align="right">8</td>
+                            <td>CE03</td>
+                            <td>Num</td>
+                            <td>Number of jobs with earnings greater than $3333/month</td>
+                        </tr>
+                        <tr><td align="right">9</td>
+                            <td>CNS01</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 11 (Agriculture, Forestry, Fishing and Hunting)</td>
+                        </tr>
+                        <tr><td align="right">10</td>
+                            <td>CNS02</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 21 (Mining, Quarrying, and Oil and Gas Extraction)</td>
+                        </tr>
+                        <tr><td align="right">11</td>
+                            <td>CNS03</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 22 (Utilities)</td>
+                        </tr>
+                        <tr><td align="right">12</td>
+                            <td>CNS04</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 23 (Construction)</td>
+                        </tr>
+                        <tr><td align="right">13</td>
+                            <td>CNS05</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 31-33 (Manufacturing)</td>
+                        </tr>
+                        <tr><td align="right">14</td>
+                            <td>CNS06</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 42 (Wholesale Trade)</td>
+                        </tr>
+                        <tr><td align="right">15</td>
+                            <td>CNS07</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 44-45 (Retail Trade)</td>
+                        </tr>
+                        <tr><td align="right">16</td>
+                            <td>CNS08</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 48-49 (Transportation and Warehousing)</td>
+                        </tr>
+                        <tr><td align="right">17</td>
+                            <td>CNS09</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 51 (Information)</td>
+                        </tr>
+                        <tr><td align="right">18</td>
+                            <td>CNS10</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 52 (Finance and Insurance)</td>
+                        </tr>
+                        <tr><td align="right">19</td>
+                            <td>CNS11</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 53 (Real Estate and Rental and Leasing)</td>
+                        </tr>
+                        <tr><td align="right">20</td>
+                            <td>CNS12</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 54 (Professional, Scientific, and Technical Services)</td>
+                        </tr>
+                        <tr><td align="right">21</td>
+                            <td>CNS13</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 55 (Management of Companies and Enterprises)</td>
+                        </tr>
+                        <tr><td align="right">22</td>
+                            <td>CNS14</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 56 (Administrative and Support and Waste Management and Remediation Services)</td>
+                        </tr>
+                        <tr><td align="right">23</td>
+                            <td>CNS15</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 61 (Educational Services)</td>
+                        </tr>
+                        <tr><td align="right">24</td>
+                            <td>CNS16</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 62 (Health Care and Social Assistance)</td>
+                        </tr>
+                        <tr><td align="right">25</td>
+                            <td>CNS17</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 71 (Arts, Entertainment, and Recreation)</td>
+                        </tr>
+                        <tr><td align="right">26</td>
+                            <td>CNS18</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 72 (Accommodation and Food Services)</td>
+                        </tr>
+                        <tr><td align="right">27</td>
+                            <td>CNS19</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 81 (Other Services [except Public Administration])</td>
+                        </tr>
+                        <tr><td align="right">28</td>
+                            <td>CNS20</td>
+                            <td>Num</td>
+                            <td>Number of jobs in NAICS sector 92 (Public Administration)</td>
+                        </tr>
+                        <tr><td align="right">29</td>
+                            <td>CR01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: White, Alone</td>
+                        </tr>
+                        <tr><td align="right">30</td>
+                            <td>CR02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Black or African American Alone</td>
+                        </tr>
+                        <tr><td align="right">31</td>
+                            <td>CR03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: American Indian or Alaska Native Alone</td>
+                        </tr>
+                        <tr><td align="right">32</td>
+                            <td>CR04</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Asian Alone</td>
+                        </tr>
+                        <tr><td align="right">33</td>
+                            <td>CR05</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Native Hawaiian or Other Pacific Islander Alone</td>
+                        </tr>
+                        <tr><td align="right">34</td>
+                            <td>CR07</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Race: Two or More Race Groups</td>
+                        </tr>
+                        <tr><td align="right">35</td>
+                            <td>CT01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Ethnicity: Not Hispanic or Latino</td>
+                        </tr>
+                        <tr><td align="right">36</td>
+                            <td>CT02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Ethnicity: Hispanic or Latino</td>
+                        </tr>
+                        <tr><td align="right">37</td>
+                            <td>CD01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: Less than high school</td>
+                        </tr>
+                        <tr><td align="right">38</td>
+                            <td>CD02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: High school or equivalent, no college</td>
+                        </tr>
+                        <tr><td align="right">39</td>
+                            <td>CD03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: Some college or Associate degree</td>
+                        </tr>
+                        <tr><td align="right">40</td>
+                            <td>CD04</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Educational Attainment: Bachelor&#39;s degree or advanced degree</td>
+                        </tr>
+                        <tr><td align="right">41</td>
+                            <td>CS01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Sex: Male</td>
+                        </tr>
+                        <tr><td align="right">42</td>
+                            <td>CS02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers with Sex: Female</td>
+                        </tr>
+                        <tr><td align="right">43</td>
+                            <td>CFA01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Age: 0-1 Years</td>
+                        </tr>
+                        <tr><td align="right">44</td>
+                            <td>CFA02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Age: 2-3 Years</td>
+                        </tr>
+                        <tr><td align="right">45</td>
+                            <td>CFA03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Age: 4-5 Years</td>
+                        </tr>
+                        <tr><td align="right">46</td>
+                            <td>CFA04</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Age: 6-10 Years</td>
+                        </tr>
+                        <tr><td align="right">47</td>
+                            <td>CFA05</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Age: 11+ Years</td>
+                        </tr>
+                        <tr><td align="right">48</td>
+                            <td>CFS01</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Size: 0-19 Employees</td>
+                        </tr>
+                        <tr><td align="right">49</td>
+                            <td>CFS02</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Size: 20-49 Employees</td>
+                        </tr>
+                        <tr><td align="right">50</td>
+                            <td>CFS03</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Size: 50-249 Employees</td>
+                        </tr>
+                        <tr><td align="right">51</td>
+                            <td>CFS04</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Size: 250-499 Employees</td>
+                        </tr>
+                        <tr><td align="right">52</td>
+                            <td>CFS05</td>
+                            <td>Num</td>
+                            <td>Number of jobs for workers at firms with Firm Size: 500+ Employees</td>
+                        </tr>
+                        <tr><td align="right">53</td>
+                            <td>createdate</td>
+                            <td>Char</td>
+                            <td>Date on which data was created, formatted as YYYYMMDD</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <h3 id="dd4" class="table-head">Environmental Justice Indices</h3>
+                <h4><a href="https://celebratingcities.data.socrata.com/EPA/Environmental-Justice-Indices/47cn-zgum" target="_blank">Dataset</a></h4>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead><tr><th title="Field #1">Field</th>
+                            <th title="Field #2">Description</th>
+                        </tr></thead>
+                        <tbody>
+                        <tr><td>STATE_NAME</td>
+                            <td>State</td>
+                        </tr>
+                        <tr><td>BlkGrp</td>
+                            <td>Block Group</td>
+                        </tr>
+                        <tr><td>pctpre1960</td>
+                            <td>% pre-1960 housing (lead paint indicator)</td>
+                        </tr>
+                        <tr><td>dpm</td>
+                            <td>Diesel particulate matter level in air</td>
+                        </tr>
+                        <tr><td>cancer</td>
+                            <td>Air toxics cancer risk</td>
+                        </tr>
+                        <tr><td>resp</td>
+                            <td>Air toxics respiratory hazard index</td>
+                        </tr>
+                        <tr><td>neuro</td>
+                            <td>Air toxics neurological hazard index</td>
+                        </tr>
+                        <tr><td>traffic_sc</td>
+                            <td>Traffic proximity and volume</td>
+                        </tr>
+                        <tr><td>proximity_</td>
+                            <td>Proximity to major direct dischargers to water</td>
+                        </tr>
+                        <tr><td>proximity1</td>
+                            <td>Proximity to National Priorities List (NPL) sites</td>
+                        </tr>
+                        <tr><td>proximit_1</td>
+                            <td>Proximity to Risk Management Plan (RMP) facilities</td>
+                        </tr>
+                        <tr><td>proximit_2</td>
+                            <td>Proximity to Treatment Storage and Disposal (TSDF) facilities</td>
+                        </tr>
+                        <tr><td>o3</td>
+                            <td>Ozone level in air</td>
+                        </tr>
+                        <tr><td>pm</td>
+                            <td>PM2.5 level in air</td>
+                        </tr>
+                        <tr><td>statename</td>
+                            <td>Two-letter abbreviation for State</td>
+                        </tr>
+                        <tr><td>ST</td>
+                            <td>State</td>
+                        </tr>
+                        <tr><td>EJ_DISPARI</td>
+                            <td>EJ Index for % pre-1960 housing (lead paint indicator)</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_1</td>
+                            <td>EJ Index for Diesel particulate matter level in air</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_2</td>
+                            <td>EJ Index for Air toxics cancer risk</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_3</td>
+                            <td>EJ Index for Air toxics respiratory hazard index</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_4</td>
+                            <td>EJ Index for Air toxics neurological hazard index</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_5</td>
+                            <td>EJ Index for Traffic proximity and volume</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_6</td>
+                            <td>EJ Index for Proximity to major direct dischargers to water</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_7</td>
+                            <td>EJ Index for Proximity to National Priorities List (NPL) sites</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_8</td>
+                            <td>EJ Index for Proximity to Risk Management Plan (RMP) facilities</td>
+                        </tr>
+                        <tr><td>EJ_DISPA_9</td>
+                            <td>EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities</td>
+                        </tr>
+                        <tr><td>EJ_DISP_10</td>
+                            <td>EJ Index for Ozone level in air</td>
+                        </tr>
+                        <tr><td>EJ_DISP_11</td>
+                            <td>EJ Index for PM2.5 level in air</td>
+                        </tr>
+                        <tr><td>pctile_pct</td>
+                            <td>Percentile for % pre-1960 housing (lead paint indicator)</td>
+                        </tr>
+                        <tr><td>pctile_dpm</td>
+                            <td>Percentile for Diesel particulate matter level in air</td>
+                        </tr>
+                        <tr><td>pctile_can</td>
+                            <td>Percentile for Air toxics cancer risk</td>
+                        </tr>
+                        <tr><td>pctile_res</td>
+                            <td>Percentile for Air toxics respiratory hazard index</td>
+                        </tr>
+                        <tr><td>pctile_neu</td>
+                            <td>Percentile for Air toxics neurological hazard index</td>
+                        </tr>
+                        <tr><td>pctile_tra</td>
+                            <td>Percentile for Traffic proximity and volume</td>
+                        </tr>
+                        <tr><td>pctile_pro</td>
+                            <td>Percentile for Proximity to major direct dischargers to water</td>
+                        </tr>
+                        <tr><td>pctile_p_1</td>
+                            <td>Percentile for Proximity to National Priorities List (NPL) sites</td>
+                        </tr>
+                        <tr><td>pctile_p_2</td>
+                            <td>Percentile for Proximity to Risk Management Plan (RMP) facilities</td>
+                        </tr>
+                        <tr><td>pctile_p_3</td>
+                            <td>Percentile for Proximity to Treatment Storage and Disposal (TSDF) facilities</td>
+                        </tr>
+                        <tr><td>pctile_o3</td>
+                            <td>Percentile for Ozone level in air</td>
+                        </tr>
+                        <tr><td>pctile_pm</td>
+                            <td>Percentile for PM2.5 level in air</td>
+                        </tr>
+                        <tr><td>pctile_EJ_</td>
+                            <td>Percentile for EJ Index for % pre-1960 housing (lead paint indicator)</td>
+                        </tr>
+                        <tr><td>pctile_EJ1</td>
+                            <td>Percentile for EJ Index for Diesel particulate matter level in air</td>
+                        </tr>
+                        <tr><td>pctile_E_1</td>
+                            <td>Percentile for EJ Index for Air toxics cancer risk</td>
+                        </tr>
+                        <tr><td>pctile_E_2</td>
+                            <td>Percentile for EJ Index for Air toxics respiratory hazard index</td>
+                        </tr>
+                        <tr><td>pctile_E_3</td>
+                            <td>Percentile for EJ Index for Air toxics neurological hazard index</td>
+                        </tr>
+                        <tr><td>pctile_E_4</td>
+                            <td>Percentile for EJ Index for Traffic proximity and volume</td>
+                        </tr>
+                        <tr><td>pctile_E_5</td>
+                            <td>Percentile for EJ Index for Proximity to major direct dischargers to water</td>
+                        </tr>
+                        <tr><td>pctile_E_6</td>
+                            <td>Percentile for EJ Index for Proximity to National Priorities List (NPL) sites</td>
+                        </tr>
+                        <tr><td>pctile_E_7</td>
+                            <td>Percentile for EJ Index for Proximity to Risk Management Plan (RMP) facilities</td>
+                        </tr>
+                        <tr><td>pctile_E_8</td>
+                            <td>Percentile for EJ Index for Proximity to Treatment Storage and Disposal (TSDF) facilities</td>
+                        </tr>
+                        <tr><td>pctile_E_9</td>
+                            <td>Percentile for EJ Index for Ozone level in air</td>
+                        </tr>
+                        <tr><td>pctile__10</td>
+                            <td>Percentile for EJ Index for PM2.5 level in air</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
             </div> <!-- dd container -->
             <hr>
 

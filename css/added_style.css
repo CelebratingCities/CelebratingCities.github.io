@@ -4,6 +4,22 @@ body{
     /*padding-top:40px;*/
 }
 
+.transitions{
+    color:#4DB5D9;
+    transition: all 0.2s ease-in-out 0s;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+.transitions:hover{
+    color: #0F4E65
+}
+
+.headshot{
+    max-height:400px;
+    /*padding-top:30px;*/
+}
+
 .wrapper {
     background-color:white;
 }
@@ -168,6 +184,11 @@ body{
 #mainlinks a:hover,
 #mainlinks a:active{
     color:#4DB5D9;
+
+}
+
+#mainlinks2 div{
+    padding-bottom:50px;
 
 }
 
